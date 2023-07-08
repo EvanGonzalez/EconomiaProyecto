@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,8 +10,8 @@
   html, body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    font-size: 1.1em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
     text-align: center;
     color: #F2EEE3;
   }
@@ -27,7 +29,7 @@
   }
   
   .hg-sidebar {
-    background: #A0BFE0;
+    background: #C5DFF8;
   }
   
   .holy-grail-content {
@@ -62,3 +64,9 @@
       flex: 0 0 260px;
     }
   }
+
+
+
+  /* css adicional */
+  /* --- */
+

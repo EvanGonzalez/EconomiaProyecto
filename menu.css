@@ -18,7 +18,7 @@ nav .wrapper {
 }
 .wrapper .logo {
     color: #ffffff;
-    font-size: 35px;
+    font-size: 45px;
     font-weight: 600;
 }
 .wrapper .logo span {
@@ -33,7 +33,7 @@ nav .wrapper {
 .nav-links li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
     padding: 9px 15px;
     border-radius: 5px;
