@@ -1,4 +1,4 @@
-function calcularValorPresenteAnualidad(n,i,R){
+function calcularMontoAnualidad(n,i,R){
     if(n<=0||i<=0||R<=0){
         return "Error, los datos no pueden ser menores a 1"
     }else{
