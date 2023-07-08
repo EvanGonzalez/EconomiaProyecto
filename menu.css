@@ -3,7 +3,7 @@ nav {
     position:relative;
     z-index: 99;
     width: 100%;
-    background: #28282b;
+    background: #7895CB;
 }
 nav .wrapper {
     position: relative;
@@ -22,7 +22,7 @@ nav .wrapper {
     font-weight: 600;
 }
 .wrapper .logo span {
-    color: #38b6ff;
+    color: #4A55A2;
 }
 .wrapper .nav-links {
     display: inline-flex;
@@ -143,7 +143,7 @@ nav .wrapper {
         max-width: 350px;
         top: 0;
         left: -100%;
-        background: #28282b;
+        background: #7895CB;
         display: block;
         padding: 50px 10px;
         line-height: 50px;

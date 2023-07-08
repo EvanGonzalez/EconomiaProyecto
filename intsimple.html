@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/estiloprincipal.css">
-    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="estiloprincipal.css">
+    <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Interés simple</title>
 </head>
@@ -16,12 +16,12 @@
         <!-- inicio de menu -->
         <nav>
             <div class="wrapper">
-                <div class="logo"><span>Desarrollo</span>Software 4</div>
+                <div class="logo"><span>Code</span>Bank</div>
                 <input type="radio" name="slider" id="menu-btn">
                 <input type="radio" name="slider" id="close-btn">
                 <ul class="nav-links">
                     <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-                    <li><a href="/inicio.html">Inicio</li>
+                    <li><a href="/index.html">Inicio</li>
                     <li><a href="/intsimple.html">Interés simple</li>
                     <li><a href="/intcompuesto.html">Interés compuesto</a></li>
                     <li><a href="/anualidad.html">Anualidades Ordinarias</a></li>
@@ -33,23 +33,197 @@
     </header>
 
     <div class="holy-grail-body">
-       
+
 
         <section class="holy-grail-content">
             <p>Main Content</p>
             <!-- inicio de programacion interes simple -->
-            <button onclick="showInput('input1')">Mostrar Input 1</button>
-            <button onclick="showInput('input2')">Mostrar Input 2</button>
-          
+            <button onclick="showInput('input1')" id="button1" class="button">Calcular capital</button>
+            <button onclick="showInput('input2')" id="button2" class="button">Calcular intrés</button>
+            <button onclick="showInput('input3')" id="button3" class="button">Calcular monto</button>
+            <button onclick="showInput('input4')" id="button4" class="button">Calcular monto con tiempo</button>
+            <button onclick="showInput('input5')" id="button5" class="button">Calcular capital con tiempo</button>
+            <button onclick="showInput('input6')" id="button6" class="button">Calcular interés con tiempo</button>
+            <button onclick="showInput('input7')" id="button7" class="button">Calcular capital con tiempo 2</button>
+            <button onclick="showInput('input8')" id="button8" class="button">Calcular tiempo</button>
+            <button onclick="showInput('input9')" id="button9" class="button">Calcular tiempo exacto</button>
+            <button onclick="showInput('input10')" id="button10" class="button">Calcular tiempo aproximado</button>
+            <button onclick="showInput('input11')" id="button11" class="button">Calcular interés simple exacto</button>
+            <button onclick="showInput('input12')" id="button12" class="button">Calcular interés simple
+                ordinario</button>
+
+            <!-- calcular capital -->
             <div id="input1" style="display: none;">
-              <input type="text" placeholder="Input 1">
+                <input type="text" placeholder="Input 1">
+                <input type="number" placeholder="Monto">
+                <input type="number" placeholder="Interés">
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado capital">
+                </div>
             </div>
-          
+
+
+            <!-- fin de calcular capital -->
+
+            <!-- calcular interes -->
             <div id="input2" style="display: none;">
-              <input type="text" placeholder="Input 2">
+                <input type="text" placeholder="Input 2">
+                <input type="number" placeholder="Monto">
+                <input type="number" placeholder="Capital">
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado interés">
+                </div>
             </div>
-          
-            
+            <!-- fin de calcular interes -->
+
+            <!-- calcular monto -->
+            <div id="input3" style="display: none;">
+                <input type="number" placeholder="Capital">
+                <input type="number" placeholder="interes">
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado monto">
+                </div>
+            </div>
+            <!-- finde calcular monto -->
+
+            <!-- Calcular monto con tiempo -->
+            <div id="input4" style="display: none;">
+                <input type="number" placeholder="Monto">
+                <input type="number" placeholder="Tiempo">
+                <input type="number" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
+                <input type="text" id="decimalInput" disabled>
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado monto">
+                </div>
+            </div>
+            <!-- fin de calcular monto con tiempo -->
+
+            <!-- calcular capital con tiempo -->
+            <div id="input5" style="display: none;">
+                <input type="number" placeholder="Monto">
+                <input type="number" placeholder="Tiempo">
+                <input type="number" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
+                <input type="text" id="decimalInput" disabled>
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado capital">
+                </div>
+            </div>
+            <!-- fin de calcular capital con tiempo -->
+
+            <!-- calcular interes con tiempo -->
+            <div id="input6" style="display: none;">
+                <input type="number" placeholder="Monto">
+                <input type="number" placeholder="Tiempo">
+                <input type="number" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
+                <input type="text" id="decimalInput" disabled>
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado interes">
+                </div>
+            </div>
+            <!-- fin de calcular interes con tiempo -->
+
+            <!-- calcular capital con tiempo segunda forma -->
+            <div id="input7" style="display: none;">
+                <input type="number" placeholder="Monto">
+                <input type="number" placeholder="Tiempo">
+                <input type="number" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
+                <input type="text" id="decimalInput" disabled>
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado capital">
+                </div>
+            </div>
+            <!-- fin de calcular capital con tiempo segunda forma -->
+
+            <!-- calcular tiempo -->
+            <div id="input8" style="display: none;">
+                <input type="number" placeholder="Interés">
+                <input type="number" placeholder="Tasa de interés">
+                <input type="number" placeholder="Capital">
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado tiempo">
+                </div>
+            </div>
+            <!-- fin de calcular tiempo -->
+
+            <!-- calcular tiempo exacto -->
+            <div id="input9" style="display: none;">
+                <label class="-field-date">
+                    <span>Fecha inicial</span>
+                    <input type="date" placeholder="Fecha inicial">
+                </label>
+
+                <label for="Fecha Inicial"></label>
+                <label class="-field-date">
+                    <span>Fecha final</span>
+                    <input type="date" placeholder="Fecha final">
+                </label>
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero"
+                        placeholder="Resultado tiempo exacto">
+                </div>
+            </div>
+            <!-- fin de calcular tiempo exacto -->
+
+
+            <!-- calcular tiempo aproximado -->
+            <div id="input10" style="display: none;">
+                <label class="-field-date">
+                    <span>Fecha inicial</span>
+                    <input type="date" placeholder="Fecha inicial">
+                </label>
+
+                <label for="Fecha Inicial"></label>
+                <label class="-field-date">
+                    <span>Fecha final</span>
+                    <input type="date" placeholder="Fecha final">
+                </label>
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero"
+                        placeholder="Resultado tiempo aproximado">
+                </div>
+            </div>
+
+
+            <!-- fin de calcular tiempo aproximado -->
+
+
+            <!-- calcular interes simple exacto -->
+            <div id="input11" style="display: none;">
+                <input type="number" placeholder="Tiempo">
+                <input type="number" placeholder="Capital">
+                <input type="number" placeholder="Tasa de interés">
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero"
+                        placeholder="Resultado interés exacto">
+                </div>
+            </div>
+            <!-- fin de calcular interes simple exacto -->
+
+
+            <!-- calcular interes simple ordinario -->
+            <div id="input12" style="display: none;">
+                <input type="number" placeholder="Tiempo">
+                <input type="number" placeholder="Capital">
+                <input type="number" placeholder="Tasa de interés">
+                <div class="form-group">
+                    <label for="">Resultado</label>
+                    <input type="number" class="form-control" readonly="" id="entero"
+                        placeholder="Resultado interés ordinario">
+                </div>
+            </div>
+            <!-- fin de calcular interes simple ordinario -->
+
 
             <!-- fin de interes simple programacion -->
         </section>
