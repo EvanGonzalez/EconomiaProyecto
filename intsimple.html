@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="menu.css">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     <title>Interés simple</title>
 </head>
 
@@ -39,20 +41,20 @@
 
 
         <section class="holy-grail-content">
-            <p>Main Content</p>
+            <p>Opciones</p>
             <!-- inicio de programacion interes simple -->
-            <button onclick="showInput('input1')" id="button1" class="button">Calcular capital</button>
-            <button onclick="showInput('input2')" id="button2" class="button">Calcular interés</button>
-            <button onclick="showInput('input3')" id="button3" class="button">Calcular monto</button>
-            <button onclick="showInput('input4')" id="button4" class="button">Calcular monto con tiempo</button>
-            <button onclick="showInput('input5')" id="button5" class="button">Calcular capital con tiempo</button>
-            <button onclick="showInput('input6')" id="button6" class="button">Calcular interés con tiempo</button>
-            <button onclick="showInput('input7')" id="button7" class="button">Calcular capital con tiempo 2</button>
-            <button onclick="showInput('input8')" id="button8" class="button">Calcular tiempo</button>
-            <button onclick="showInput('input9')" id="button9" class="button">Calcular tiempo exacto</button>
-            <button onclick="showInput('input10')" id="button10" class="button">Calcular tiempo aproximado</button>
-            <button onclick="showInput('input11')" id="button11" class="button">Calcular interés simple exacto</button>
-            <button onclick="showInput('input12')" id="button12" class="button">Calcular interés simple
+            <button onclick="showInput('input1')" id="button1"  type="button" class="btn btn-outline-dark">Calcular capital</button>
+            <button onclick="showInput('input2')" id="button2"  type="button" class="btn btn-outline-dark">Calcular interés</button>
+            <button onclick="showInput('input3')" id="button3"  type="button" class="btn btn-outline-dark">Calcular monto</button>
+            <button onclick="showInput('input4')" id="button4"  type="button" class="btn btn-outline-dark">Calcular monto con tiempo</button>
+            <button onclick="showInput('input5')" id="button5"  type="button" class="btn btn-outline-dark">Calcular capital con tiempo</button>
+            <button onclick="showInput('input6')" id="button6"  type="button" class="btn btn-outline-dark">Calcular interés con tiempo</button>
+            <button onclick="showInput('input7')" id="button7"  type="button" class="btn btn-outline-dark">Calcular capital con tiempo 2</button>
+            <button onclick="showInput('input8')" id="button8"  type="button" class="btn btn-outline-dark">Calcular tiempo</button>
+            <button onclick="showInput('input9')" id="button9"  type="button" class="btn btn-outline-dark">Calcular tiempo exacto</button>
+            <button onclick="showInput('input10')" id="button10" type="button" class="btn btn-outline-dark">Calcular tiempo aproximado</button>
+            <button onclick="showInput('input11')" id="button11"  type="button" class="btn btn-outline-dark">Calcular interés simple exacto</button>
+            <button onclick="showInput('input12')" id="button12"  type="button" class="btn btn-outline-dark">Calcular interés simple
                 ordinario</button>
 
             <!-- calcular capital -->
@@ -70,8 +72,7 @@
             <!-- fin de calcular capital -->
 
             <!-- calcular interes -->
-            <div id="input2" style="display: none;">
-                
+            <div id="input2" style="display: none;">         
                 <input type="number" placeholder="Monto">
                 <input type="number" placeholder="Capital">
                 <div class="form-group">
