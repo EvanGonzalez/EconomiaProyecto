@@ -60,12 +60,31 @@
             <!-- calcular capital -->
             <div id="input1" style="display: none;">
                 
-                <input type="number" placeholder="Monto">
-                <input type="number" placeholder="Interés">
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado capital">
-                </div>
+                <br>
+                    <fieldset>
+                    <legend>Ingrese los datos requeridos - Capital </legend><br>
+                        <!-- Texto de formula -->
+                        <label for="monto">Fórmula: C = S - I </label><br/><br>
+                            
+                            C=&nbsp;&nbsp;
+                        
+                            <!-- input para Monto -->
+                            <input type="number" id="montoC1" placeholder="Ingresa Monto">
+                            
+                            &nbsp;&nbsp;-&nbsp;&nbsp;
+
+                            <!-- input para Interés -->
+                            <input type="number" id="interesC1" placeholder="Ingresa Interés"> <br/><br>
+
+                            <!-- input tipo boton para calcular, llama a funcion calcular capital 1 -->
+                            <input type="button" value="!Calcular!" onclick="calCapital1()"> <br><br>
+                        
+                        <div class="form-group">
+                            <label for="">Resultado: </label>
+                            <!-- Muestra resultado mediante id enviado desde la funcion calCapital1 -->
+                            <p for="" id="resultcalCapital1"></p>
+                        </div>
+                    </fieldset>
             </div>
 
 
@@ -108,14 +127,57 @@
 
             <!-- calcular capital con tiempo -->
             <div id="input5" style="display: none;">
-                <input type="number" placeholder="Monto">
-                <input type="number" placeholder="Tiempo">
-                <input type="number" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
-                <input type="text" id="decimalInput" disabled>
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado capital">
-                </div>
+                <br>
+                <fieldset>
+                <legend>Ingrese los datos requeridos - Capital con tiempo</legend><br>
+                    
+                    <!-- Texto de formula -->
+                    <label for="monto">Fórmula: C = I / (it) </label><br/><br>
+                    
+                        C=&nbsp;&nbsp;
+                        
+                        <!-- input para Interés (I) -->
+                        <input type="number" id="interesC2" placeholder="Ingresa Interés">
+                        &nbsp;&nbsp;/&nbsp;&nbsp;
+                        &nbsp;&nbsp;(&nbsp;&nbsp;
+                        
+                        <!-- input para la tasa de interes (i) -->
+                        <input type="number" id="tasainteresC2" placeholder="Ingresa tasa de interés (%)"> 
+                        &nbsp;&nbsp;*&nbsp;&nbsp;
+                        
+                        <!-- input paratiempo (t) -->
+                        <input type="number" id="tiempoC2" placeholder="Ingresa tiempo">
+                        &nbsp;&nbsp;)&nbsp;&nbsp;<br/><br>
+
+                        <!-- Tipo de tasa -->
+                        <label for="">Tipo de tasa de interés:</label><br>
+                        <!-- Radio button para pedir el tipo de tasa es -->
+                        <input type="radio" id="ninguna" name="tipotasa" value="Ninguna" checked>
+                        <label for="Ninguna">Ninguna</label><br>
+                        <input type="radio" id="anual" name="tipotasa" value="Anual">
+                        <label for="anual">Anual</label><br>
+                        <input type="radio" id="mensual" name="tipotasa" value="Mensual">
+                        <label for="mensual">Mensual</label><br><br>
+
+                        <!-- Tipo de tiempo -->
+                        <label for="">Tipo de tiempo:</label><br>
+                        <!-- Radio button para pedir el tipo de tiempo -->
+                        <input type="radio" id="ninguna" name="tipotiempo" value="Ninguna" checked>
+                        <label for="Ninguna">Ninguna</label><br>
+                        <input type="radio" id="anos" name="tipotiempo" value="Anos">
+                        <label for="anual">Años</label><br>
+                        <input type="radio" id="meses" name="tipotiempo" value="Meses">
+                        <label for="mensual">Meses</label><br>
+
+                        <!-- input tipo boton para calcular, llama a funcion calcular capital 2 -->
+                        <input type="button" value="!Calcular!" onclick="calCapital2()"> <br><br>
+                    
+                    <div class="form-group">
+                        <label for="">Resultado: </label>
+                        <!-- Muestra el resultado mediante id enviado desde la funcion calcapital2 -->
+                        <p for="" id="resultcalCapital2"></p>
+                    </div>
+                </fieldset>
             </div>
             <!-- fin de calcular capital con tiempo -->
 
@@ -134,26 +196,68 @@
 
             <!-- calcular capital con tiempo segunda forma -->
             <div id="input7" style="display: none;">
-                <input type="number" placeholder="Monto">
-                <input type="number" placeholder="Tiempo">
-                <input type="number" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
-                <input type="text" id="decimalInput" disabled>
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado capital">
-                </div>
+                <br>
+                <fieldset>
+                <legend>Ingrese los datos requeridos - Capital con tiempo segunda forma</legend><br>
+                    <!-- Testo que muestra la fórmula -->
+                    <label for="monto">Fórmula: C = S / (1 + it) </label><br/><br>
+                        
+                        C=&nbsp;&nbsp;
+                        
+                        <!-- input Monto (S) -->
+                        <input type="number" id="montoC3" placeholder="Ingresa Monto">
+                        &nbsp;&nbsp;/ ( 1 + &nbsp;&nbsp;
+                        
+                        <!-- input tasa de intéres (i) -->
+                        <input type="number" id="tasainteresC3" placeholder="Ingresa tasa de interés (%)"> 
+                        &nbsp;&nbsp;*&nbsp;&nbsp;
+                        
+                        <!-- input tiempo (t) -->
+                        <input type="number" id="tiempoC3" placeholder="Ingresa tiempo">
+                        &nbsp;&nbsp;)&nbsp;&nbsp;<br/><br>
+                        
+                        <!-- input de tipo boton para calcular, llama la funcion calCapital3 -->
+                        <input type="button" value="!Calcular!" onclick="calCapital3()"> <br><br>
+                    
+                    <div class="form-group">
+                        <label for="">Resultado: </label>
+                        <!-- Muestra el resultado mediante id -->
+                        <p for="" id="resultcalCapital3"></p>
+                    </div>
+                </fieldset>
             </div>
             <!-- fin de calcular capital con tiempo segunda forma -->
 
             <!-- calcular tiempo -->
             <div id="input8" style="display: none;">
-                <input type="number" placeholder="Interés">
-                <input type="number" placeholder="Tasa de interés">
-                <input type="number" placeholder="Capital">
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado tiempo">
-                </div>
+                <br>
+                <fieldset>
+                <legend>Ingrese los datos requeridos - Tiempo</legend><br>
+                    <!-- Testo que muestra la fórmula -->
+                    <label for="monto">Fórmula: t = I / Ci </label><br/><br>
+                        
+                        C=&nbsp;&nbsp;
+                        
+                        <!-- input Interes (I) -->
+                        <input type="number" id="interesT" placeholder="Ingresa Interés">
+                        &nbsp;&nbsp;/&nbsp;&nbsp;
+                        
+                        <!-- input Capital (C) -->
+                        <input type="number" id="capitalT" placeholder="Ingresa Capital"> 
+                        &nbsp;&nbsp;*&nbsp;&nbsp;
+                        
+                        <!-- input tasa de interés (i) -->
+                        <input type="number" id="tasainteresT" placeholder="Ingresa tasa de interés (%)"><br/><br>
+                        
+                        <!-- input de tipo boton para calcular, llama a la funcion cal Tiempo -->
+                        <input type="button" value="!Calcular!" onclick="calTiempo()"> <br><br>
+                    
+                    <div class="form-group">
+                        <label for="">Resultado: </label>
+                        <!-- Muestra resultado por id  -->
+                        <p for="" id="resultcalTiempo"></p>
+                    </div>
+                </fieldset>
             </div>
             <!-- fin de calcular tiempo -->
 
