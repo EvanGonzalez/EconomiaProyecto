@@ -109,23 +109,23 @@ function calCapital2(){
 
             }else{
                 //sino si la tasa es anual y el tiempo es en meses, se divide el tiempo entre 12
-                if(elementoActivo == "Anual" && elementoActivo2 == "Meses" ){
+                if(elementoActivo == "Anual" && elementoActivo2 == "Meses" || elementoActivo == "Anual" && elementoActivo2 == "Ninguna" ){
                     
                     //calculo del capital
                     let capital2 = interes / (tasainteres * (tiempo/12));
 
                     //retorna resultado
-                    return resultCapital2.innerHTML = "El resultado de "+ interes + " entre " + tasainteres + " por " + tiempo + "/12 " + " es igual a " + capital2.toFixed(2);
+                    return resultCapital2.innerHTML = "El resultado es:  C = "+ interes + " / " + tasainteres + " * " + tiempo + " / 12 " + " = " + capital2.toFixed(2);
                 
                 }else{
                     //sino si la tasa es mensual y el tiempo es en años, se multiplica el tiempo por 12
-                    if(elementoActivo == "Mensual" && elementoActivo2 == "Anos" ){
+                    if(elementoActivo == "Mensual" && elementoActivo2 == "Anos" || elementoActivo == "Mensual" && elementoActivo2 == "Ninguna"){
                     
                         //calculo del capital
                         let capital2 = interes / (tasainteres * (tiempo*12));
 
                         //retorna el resultado
-                        return resultCapital2.innerHTML = "El resultado de "+ interes + " entre " + tasainteres + " por " + tiempo + "*12 " + " es igual a " + capital2.toFixed(2);
+                        return resultCapital2.innerHTML = "El resultado es:  C = "+ interes + " / " + tasainteres + " * " + tiempo + " * 12 " + " = " + capital2.toFixed(2);
                     
                     }else{
                         //si no se selecciona nada en los radio
