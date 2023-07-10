@@ -87,8 +87,7 @@ function calCapital2(){
     let tiempo = document.getElementById('tiempoC2').value;
     
     //capta el valor los radio
-    let elementoActivo = document.querySelector('input[name="tipotasa"]:checked').value;
-    let elementoActivo2 = document.querySelector('input[name="tipotiempo"]:checked').value;
+    let elementoActivo = document.querySelector('input[name="tipotiempo"]:checked').value;
     
     //alerta de confirmacion de datos
     var resConfirmacion = confirm("¿Deseas enviar esta información?");
@@ -99,7 +98,7 @@ function calCapital2(){
         if(tasainteres >0 && interes >0 && tiempo >0 && tasainteres != null && interes != null && tiempo != null){
             
             //si la tasa de interes es anual y el tiempo es en años ó si la tasa es mensual y el tiempo es en meses
-            if(elementoActivo == "Anual" && elementoActivo2 == "Anos" || elementoActivo == "Mensual" && elementoActivo2 == "Meses" || elementoActivo == "Ninguna" && elementoActivo2 == "Ninguna"){
+            if(elementoActivo == "Anos"){
 
                 //calculo del capital
                 let capital2 = interes / (tasainteres * tiempo);
@@ -109,31 +108,20 @@ function calCapital2(){
 
             }else{
                 //sino si la tasa es anual y el tiempo es en meses, se divide el tiempo entre 12
-                if(elementoActivo == "Anual" && elementoActivo2 == "Meses" || elementoActivo == "Anual" && elementoActivo2 == "Ninguna" ){
+                if(elementoActivo == "Meses"){
                     
                     //calculo del capital
                     let capital2 = interes / (tasainteres * (tiempo/12));
 
                     //retorna resultado
-                    return resultCapital2.innerHTML = "El resultado es:  C = "+ interes + " / " + tasainteres + " * " + tiempo + " / 12 " + " = " + capital2.toFixed(2);
+                    return resultCapital2.innerHTML = "El resultado es:  C = "+ interes + " / ( " + tasainteres + " * " + tiempo + " / 12 ) " + " = " + capital2.toFixed(2);
                 
                 }else{
-                    //sino si la tasa es mensual y el tiempo es en años, se multiplica el tiempo por 12
-                    if(elementoActivo == "Mensual" && elementoActivo2 == "Anos" || elementoActivo == "Mensual" && elementoActivo2 == "Ninguna"){
-                    
-                        //calculo del capital
-                        let capital2 = interes / (tasainteres * (tiempo*12));
-
-                        //retorna el resultado
-                        return resultCapital2.innerHTML = "El resultado es:  C = "+ interes + " / " + tasainteres + " * " + tiempo + " * 12 " + " = " + capital2.toFixed(2);
-                    
-                    }else{
-                        //si no se selecciona nada en los radio
-                        if(elementoActivo == "" && elementoActivo2 == "" ){
-                            //alerta de error
-                            var resAlert = window.alert("Error. No selecciono una opción.");
-                            return resultCapital2.innerHTML = "";
-                        }
+                    //si no se selecciona nada en los radio
+                    if(elementoActivo == "" ){
+                        //alerta de error
+                        var resAlert = window.alert("Error. No selecciono una opción.");
+                        return resultCapital2.innerHTML = "";
                     }
                 }
             }
@@ -195,7 +183,8 @@ function calTiempo(){
     var tasainteres = tasa /100;
     
     //Calculo de tiempo
-    let tiempo = interes / (capital * tasainteres); 
+    let tiem = interes / (capital * tasainteres); 
+    let tiempo = tiem * 12;
     
     //alerta para confirmar datos
     var resConfirmacion = confirm("¿Deseas enviar esta información?");
@@ -205,7 +194,7 @@ function calTiempo(){
         //si acepta entonces valida que no sean negativos, ni estén vacíos
         if(interes >0 && capital >0 && tasainteres >0 && interes != null && capital != null && tasainteres != null){
                 //retorna el resultado
-                return resultTiempo.innerHTML = "El tiempo es:  t = "+interes+" / "+capital +" * "+tasainteres+" = "+ tiempo;
+                return resultTiempo.innerHTML = "El tiempo es:  t = "+interes+" / "+capital +" * "+tasainteres+" = "+ tiempo + " meses. ";
             }else{
                 //return resultCapital1.innerHTML = "Error. Hay datos negativos o campos vacíos.";
                 //Alerta de error

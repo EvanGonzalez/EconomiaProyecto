@@ -47,9 +47,9 @@
             <button onclick="showInput('input2')" id="button2"  class="boton azul"><h3>Calcular interés</h3></button>
             <button onclick="showInput('input3')" id="button3"  class="boton azul"><h3>Calcular monto</h3></button>
             <button onclick="showInput('input4')" id="button4"  class="boton azul"><h3>Calcular monto con tiempo</h3></button>
-            <button onclick="showInput('input5')" id="button5"  class="boton azul"><h3>Calcular capital con tiempo</h3></button>
+            <button onclick="showInput('input5')" id="button5"  class="boton azul"><h3>Calcular capital con Interes</h3></button>
             <button onclick="showInput('input6')" id="button6"  class="boton azul"><h3>Calcular interés con tiempo</h3></button>
-            <button onclick="showInput('input7')" id="button7"  class="boton azul"><h3>Calcular capital con tiempo 2</h3></button>
+            <button onclick="showInput('input7')" id="button7"  class="boton azul"><h3>Calcular capital con Monto</h3></button>
             <button onclick="showInput('input8')" id="button8" class="boton azul"><h3>Calcular tiempo</h3></button>
             <button onclick="showInput('input9')" id="button9"  class="boton azul"><h3>Calcular tiempo exacto</h3></button>
             <button onclick="showInput('input10')" id="button10" class="boton azul"><h3>Calcular tiempo aproximado</h3></button>
@@ -129,7 +129,7 @@
             <div id="input5" style="display: none;">
                 <br>
                 <fieldset>
-                <legend>Ingrese los datos requeridos - Capital con tiempo</legend><br>
+                <legend>Ingrese los datos requeridos - Capital con Interes</legend><br>
                     
                     <!-- Texto de formula -->
                     <label for="monto">Fórmula: C = I / (it) </label><br/><br>
@@ -149,22 +149,10 @@
                         <input type="number" id="tiempoC2" placeholder="Ingresa tiempo">
                         &nbsp;&nbsp;)&nbsp;&nbsp;<br/><br>
 
-                        <!-- Tipo de tasa -->
-                        <label for="">Tipo de tasa de interés:</label><br>
-                        <!-- Radio button para pedir el tipo de tasa es -->
-                        <input type="radio" id="ninguna" name="tipotasa" value="Ninguna" checked>
-                        <label for="Ninguna">Ninguna</label><br>
-                        <input type="radio" id="anual" name="tipotasa" value="Anual">
-                        <label for="anual">Anual</label><br>
-                        <input type="radio" id="mensual" name="tipotasa" value="Mensual">
-                        <label for="mensual">Mensual</label><br><br>
-
                         <!-- Tipo de tiempo -->
                         <label for="">Tipo de tiempo:</label><br>
                         <!-- Radio button para pedir el tipo de tiempo -->
-                        <input type="radio" id="ninguna" name="tipotiempo" value="Ninguna" checked>
-                        <label for="Ninguna">Ninguna</label><br>
-                        <input type="radio" id="anos" name="tipotiempo" value="Anos">
+                        <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
                         <label for="anual">Años</label><br>
                         <input type="radio" id="meses" name="tipotiempo" value="Meses">
                         <label for="mensual">Meses</label><br>
@@ -198,7 +186,7 @@
             <div id="input7" style="display: none;">
                 <br>
                 <fieldset>
-                <legend>Ingrese los datos requeridos - Capital con tiempo segunda forma</legend><br>
+                <legend>Ingrese los datos requeridos - Capital con Monto</legend><br>
                     <!-- Testo que muestra la fórmula -->
                     <label for="monto">Fórmula: C = S / (1 + it) </label><br/><br>
                         
@@ -236,7 +224,7 @@
                     <!-- Testo que muestra la fórmula -->
                     <label for="monto">Fórmula: t = I / Ci </label><br/><br>
                         
-                        C=&nbsp;&nbsp;
+                        t =&nbsp;&nbsp;
                         
                         <!-- input Interes (I) -->
                         <input type="number" id="interesT" placeholder="Ingresa Interés">
