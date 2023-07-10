@@ -15,7 +15,7 @@ function calcularInteressimple2(i,t,C){
     if(i<=0||t<=0||C<=0){
         return "Error, los datos no pueden ser menores a 1"
     }else{
-        let I=C*i*t;
+        let I=C*(i/100)*(t/12);
         return I.toFixed(2);
     }
     
@@ -25,7 +25,7 @@ function calcularMontosimple(i,t,C){
     if(i<=0||t<=0||C<=0){
         return "Error, los datos no pueden ser menores a 1"
     }else{
-        let S=C*(1+i*t);
+        let S=C*(1+(i/100)*(t/12));
         return S.toFixed(2);
     }
     
