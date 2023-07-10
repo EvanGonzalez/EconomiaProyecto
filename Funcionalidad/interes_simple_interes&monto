@@ -1,7 +1,10 @@
-function calcularInteressimple1(I,S,C){
-    if(I<=0||S<=0||C<=0 && C>S){
+function calcularInteressimple1(S,C){
+    if(S<=0||C<=0){
         return "Error, los datos no pueden ser menores a 1"
     }else{
+        if(C>=S){
+            return "Error, el capital debe ser menor que el monto"
+        }
         let I=S-C;
         return I.toFixed(2);
     }
@@ -12,24 +15,24 @@ function calcularInteressimple2(i,t,C){
     if(i<=0||t<=0||C<=0){
         return "Error, los datos no pueden ser menores a 1"
     }else{
-        let I=Cit;
+        let I=C*i*t;
         return I.toFixed(2);
     }
     
 }
 
-function calcularMontosimple(i,t,C,S){
-    if(i<=0||t<=0||C<=0||S<=0){
+function calcularMontosimple(i,t,C){
+    if(i<=0||t<=0||C<=0){
         return "Error, los datos no pueden ser menores a 1"
     }else{
-        let S=C(1+it);
+        let S=C*(1+i*t);
         return S.toFixed(2);
     }
     
 }
 
-function calcularMontosimple2(I,C,S){
-    if(I<=0||C<=0||S<=0){
+function calcularMontosimple2(I,C){
+    if(I<=0||C<=0){
         return "Error, los datos no pueden ser menores a 1"
     }else{
         let S=C+I;
