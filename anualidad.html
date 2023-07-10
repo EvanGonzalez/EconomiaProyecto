@@ -4,52 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--hoja de estilo para los elementos bootsrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="menu2.css">
+    <link rel="stylesheet" href="estiloprincipal.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="botones.css">
+    <link rel="shortcut icon" href="imagenes/icons8-banco-64.png" type="image/x-icon">
+    <!--CSS y JS de Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <title>Anualidad</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <title>Inicio</title>
 </head>
 
-<body>
-    <h1>Desarrollo de Software</h1>
+<body class="holy-grail">
 
-    <nav>
-        <a href="/index.html">Inicio</a>
-        <a href="/intsimple.html">Interés Simple</a>
-        <a href="/intcompuesto.html">Interés Compuesto</a>
-        <a href="/anualidad.html">Anualidades Ordinarias</a>
-        <div class="animation start-home"></div>
-    </nav>
-
-    <form action="" method="POST" role="form">
-        <div class="row">
-            <div class="col-md-12" id="">
-                <div class="card my-4" id=card1>
-                    <h5 class="card-header">Calcular importe</h5>
-                        <div class="card-body">
-                            <div class="row">
-                        <div class="col-md-4" id="">
-                            <label for="">Capital: </label>
-                            <input type="numeric" id="input3" name="" required >
-                        </div>
-                        <div class="col-md-4" id="">
-                            <label for="">Tasa de Interés: </label>
-                            <input type="numeric" id="input3" name="" required >
-                        </div>
-                        <div class="col-md-4" id="">
-                            <label for="">Tiempo: </label>
-                            <input type="numeric" id="input3" name="" required >
-                        </div>
-                    </div>
-                    </div>
+    <header>
+        <!-- inicio de menu -->
+        <nav>
+            <div class="wrapper">
+                <div class="logo"><span>Code</span>Bank</div>
+                <input type="radio" name="slider" id="menu-btn">
+                <input type="radio" name="slider" id="close-btn">
+                <ul class="nav-links">
+                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/intsimple.html">Interés simple</a></li>
+                    <li><a href="/intcompuesto.html">Interés compuesto</a></li>
+                    <li><a href="/anualidad.html">Anualidades Ordinarias</a></li>
+                </ul>
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
             </div>
+        </nav>
+        <!-- fin de menu -->
+    </header>
+
+    <div class="holy-grail-body">
+
+        <section class="holy-grail-content">
+
+
+            <div class="container text-center" id="tarjeta"><!-- Inicia columna -->
+                <h4 class="card-title">Calcular valor presente de una anualidad</h4><!-- Titulo del Card -->
+
+                <fieldset>
+                    <legend></legend><br>
+                        <!-- Texto de formula -->
+                        <label for="monto">Fórmula: A = R [1 - (1+i)^(-n)/i]</label><br/><br>
+                            
+                            A=&nbsp;&nbsp;
+                        
+                            <!-- input para Monto -->
+                            <input type="number" id="montoC1" placeholder="Ingresa Capital">
+                            
+                            &nbsp;[1&nbsp;- (1+&nbsp;
+
+                            <!-- input para Interés -->
+                            <input type="number" id="interesC1" placeholder="Ingresa tasa de interés">
+
+                            &nbsp;) ^ (&nbsp;-&nbsp;
+
+                            <input type="number" id="interesC1" placeholder="Ingresa tiempo">
+
+                            &nbsp;) / i ]&nbsp; </br></br>
+
+                            <!-- input tipo boton para calcular, llama a funcion calcular capital 1 -->
+                            <input type="button" value="¡Calcular!" onclick="calCapital1()"> <br><br>
+                        
+                        <div class="form-group">
+                            <label for="">Resultado: </label>
+                            <!-- Muestra resultado mediante id enviado desde la funcion calCapital1 -->
+                            <p for="" id="resultcalCapital1"></p>
+                        </div>
+                    </fieldset>
+                <h4 class="card-title">Calcular monto de una anualidad</h4><!-- Titulo del Card -->
+                <hr>
+                <div class="col-12">
+                    
+                </div>
+        </section>
+
+        <div class="holy-grail-sidebar-1 hg-sidebar" >
+           
         </div>
-    </form>
+
+        <div class="holy-grail-sidebar-2 hg-sidebar">
+            
+        </div>
+    </div>
 
     <footer>
-           <p>&copy; 2023 CodeBank. Todos los derechos reservados.</p>
+        <p>&copy; 2023 CodeBank. Todos los derechos reservados.</p>
     </footer>
+
+
 </body>
 
 </html>
