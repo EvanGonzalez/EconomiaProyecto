@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="estiloprincipal.css">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="icompuesto.css">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -18,47 +20,151 @@
 </head>
 
 <body class="holy-grail">
-
-    <header>
-        <!-- inicio de menu -->
-        <nav>
-            <div class="wrapper">
-                <div class="logo"><span>Code</span>Bank</div>
-                <input type="radio" name="slider" id="menu-btn">
-                <input type="radio" name="slider" id="close-btn">
-                <ul class="nav-links">
-                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-                    <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/intsimple.html">Interés simple</a></li>
-                    <li><a href="/intcompuesto.html">Interés compuesto</a></li>
-                    <li><a href="/anualidad.html">Anualidades Ordinarias</a></li>
-                </ul>
-                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
-            </div>
-        </nav>
-        <!-- fin de menu -->
-    </header>
-
-    <div class="holy-grail-body">
-
-
-        <section class="holy-grail-content">
-            <p>Main Content</p>
-        </section>
-
-        <div class="holy-grail-sidebar-1 hg-sidebar">
-            <p>Sidebar 1</p>
+    <div class="container-fluid">
+        <div class="row">
+       a
+            <header>
+                <!-- inicio de menu -->
+                <nav>
+                    <div class="wrapper">
+                        <div class="logo"><span>Code</span>Bank</div>
+                        <input type="radio" name="slider" id="menu-btn">
+                        <input type="radio" name="slider" id="close-btn">
+                        <ul class="nav-links">
+                            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                            <li><a href="/index.html">Inicio</a></li>
+                            <li><a href="/intsimple.html">Interés simple</a></li>
+                            <li><a href="/intcompuesto.html">Interés compuesto</a></li>
+                            <li><a href="/anualidad.html">Anualidades Ordinarias</a></li>
+                        </ul>
+                        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+                    </div>
+                </nav>
+                <!-- fin de menu -->
+            </header>
+            
+            <section class="principal">
+                <div class="col-md-12" id>
+                    <p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#montoCompuesto" aria-expanded="false" aria-controls="collapseExample">
+                            Monto Compuesto
+                        </button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#montoCompuesto2" aria-expanded="false" aria-controls="collapseExample">
+                            Monto Compuesto 2
+                        </button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#interesCompuesto" aria-expanded="false" aria-controls="collapseExample">
+                            Interes Compuesto
+                        </button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#capitalCompuesto" aria-expanded="false" aria-controls="collapseExample">
+                            Capital Compuesto
+                        </button>
+                    </p>
+                    <div class="collapse" id="montoCompuesto">
+                        <div class="card card-body">
+                            <div class="row">
+                                <h2>Calcular Monto Compuesto</h2>
+                                <div class="col-md-8">
+                                    <div class="row mb-3">
+                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Capital</label>
+                                        <div class="col-sm-8">
+                                            <input type="number" class="form-control" id="inputEmail3">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Tasa de Interes</label>
+                                        <div class="col-sm-8">
+                                            <input type="number" class="form-control" id="inputEmail3">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Número de periodos</label>
+                                        <div class="col-sm-8">
+                                        <input type="number" class="form-control" id="inputEmail3">
+                                        </div>
+                                    </div>                            
+                                </div>
+                                <div class="col-md-4">
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse" id="montoCompuesto2">
+                        <div class="card card-body">
+                            <div class="row">
+                            <h2>Calculo de Monto Compuesto 2</h2>
+    
+                                <div class="col-md-8">
+                                    <div class="row mb-3">
+                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Capital</label>
+                                        <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="inputEmail3">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Interes %</label>
+                                        <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="inputEmail3">
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div class="col-md-4">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse" id="interesCompuesto">
+                        <div class="card card-body">
+                            <h2>Calcular Interes Compuesto</h2>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Capitla</label>
+                                <div class="col-sm-10">
+                                <input type="number" class="form-control" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Monto</label>
+                                <div class="col-sm-10">
+                                <input type="number" class="form-control" id="inputEmail3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse" id="capitalCompuesto">
+                        <div class="card card-body">
+                            <h2>Calcular Capital Compuesto</h2>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Monto</label>
+                                <div class="col-sm-10">
+                                <input type="number" class="form-control" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Tasa de Interes</label>
+                                <div class="col-sm-10">
+                                <input type="number" class="form-control" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">numero de Periodos</label>
+                                <div class="col-sm-10">
+                                <input type="number" class="form-control" id="inputEmail3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div> 
+            </section>
+            
+    
+            <footer>
+                <p>&copy; 2023 CodeBank. Todos los derechos reservados.</p>
+            </footer>      
         </div>
-
-        <div class="holy-grail-sidebar-2 hg-sidebar">
-            <p>Sidebar 2</p>
-        </div>
-
     </div>
-
-    <footer>
-        <p>&copy; 2023 CodeBank. Todos los derechos reservados.</p>
-    </footer>
-</body>
-
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+    
+    </html>

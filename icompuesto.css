@@ -1,0 +1,11 @@
+section.principal div p{ 
+    margin-top: 1.5em;
+}
+
+section.principal div p button{
+    margin: 5px;
+}
+
+div.collapse {
+    margin: 10px;
+}
