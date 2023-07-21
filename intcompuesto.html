@@ -43,18 +43,19 @@
             </header>
             
             <section class="principal">
+                <br>
                 <div class="col-md-12" id>
                     <p>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#montoCompuesto" aria-expanded="false" aria-controls="collapseExample">
+                        <button class="btn2" data-bs-toggle="collapse" data-bs-target="#montoCompuesto" aria-expanded="false" aria-controls="collapseExample">
                             Monto Compuesto
                         </button>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#montoCompuesto2" aria-expanded="false" aria-controls="collapseExample">
+                        <button class="btn2" data-bs-toggle="collapse" data-bs-target="#montoCompuesto2" aria-expanded="false" aria-controls="collapseExample">
                             Monto Compuesto 2
                         </button>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#interesCompuesto" aria-expanded="false" aria-controls="collapseExample">
+                        <button class="btn2" data-bs-toggle="collapse" data-bs-target="#interesCompuesto" aria-expanded="false" aria-controls="collapseExample">
                             Interes Compuesto
                         </button>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#capitalCompuesto" aria-expanded="false" aria-controls="collapseExample">
+                        <button class="btn2" data-bs-toggle="collapse" data-bs-target="#capitalCompuesto" aria-expanded="false" aria-controls="collapseExample">
                             Capital Compuesto
                         </button>
                     </p>
@@ -62,31 +63,37 @@
                         <div class="card card-body">
                             <div class="row">
                                 <h2>Calcular Monto Compuesto</h2>
+                                <br>
                                 <div class="col-md-8">
-                                    <div class="row mb-3">
-                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Capital</label>
+                                    <div class="consol">
+                                        <label for="inputEmail3" class="label">Capital:</label>
                                         <div class="col-sm-8">
                                             <input type="number" class="form-control" id="inputEmail3">
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Tasa de Interes</label>
+                                    <div class="consol">
+                                        <label for="inputEmail3" class="label">Tasa de Interes:</label>
                                         <div class="col-sm-8">
                                             <input type="number" class="form-control" id="inputEmail3">
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Número de periodos</label>
+                                    <div class="consol">
+                                        <label for="inputEmail3" class="label">Número de periodos:</label>
                                         <div class="col-sm-8">
                                         <input type="number" class="form-control" id="inputEmail3">
                                         </div>
                                     </div>                            
                                 </div>
-                                <div class="col-md-4">
-    
-                                </div>
                             </div>
                         </div>
+                        <br>
+                        <div class="colaider">
+                            <button class="btn2">Calcular</button>
+                        </div>
+                        <div class="colaider">
+                            <input type="text" placeholder="Respuesta" class="res">  
+                        </div>
+                        
                     </div>
                     <div class="collapse" id="montoCompuesto2">
                         <div class="card card-body">
@@ -94,14 +101,14 @@
                             <h2>Calculo de Monto Compuesto 2</h2>
     
                                 <div class="col-md-8">
-                                    <div class="row mb-3">
-                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Capital</label>
+                                    <div class="consol">
+                                        <label for="inputEmail3" class="label">Capital</label>
                                         <div class="col-sm-10">
                                         <input type="number" class="form-control" id="inputEmail3">
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Interes %</label>
+                                    <div class="consol">
+                                        <label for="inputEmail3" class="label">Interes %</label>
                                         <div class="col-sm-10">
                                         <input type="number" class="form-control" id="inputEmail3">
                                         </div>
@@ -116,14 +123,14 @@
                     <div class="collapse" id="interesCompuesto">
                         <div class="card card-body">
                             <h2>Calcular Interes Compuesto</h2>
-                            <div class="row mb-3">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">Capitla</label>
+                            <div class="consol">
+                                <label for="inputEmail3" class="label">Capitla</label>
                                 <div class="col-sm-10">
                                 <input type="number" class="form-control" id="inputEmail3">
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">Monto</label>
+                            <div class="consol">
+                                <label for="inputEmail3" class="label">Monto</label>
                                 <div class="col-sm-10">
                                 <input type="number" class="form-control" id="inputEmail3">
                                 </div>
@@ -133,20 +140,20 @@
                     <div class="collapse" id="capitalCompuesto">
                         <div class="card card-body">
                             <h2>Calcular Capital Compuesto</h2>
-                            <div class="row mb-3">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">Monto</label>
+                            <div class="consol">
+                                <label for="inputEmail3" class="label">Monto</label>
                                 <div class="col-sm-10">
                                 <input type="number" class="form-control" id="inputEmail3">
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">Tasa de Interes</label>
+                            <div class="consol">
+                                <label for="inputEmail3" class="label">Tasa de Interes</label>
                                 <div class="col-sm-10">
                                 <input type="number" class="form-control" id="inputEmail3">
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <label for="inputEmail3" class="col-sm-2 col-form-label">numero de Periodos</label>
+                            <div class="consol">
+                                <label for="inputEmail3" class="label">numero de Periodos</label>
                                 <div class="col-sm-10">
                                 <input type="number" class="form-control" id="inputEmail3">
                                 </div>

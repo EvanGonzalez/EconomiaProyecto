@@ -1,11 +1,41 @@
-section.principal div p{ 
-    margin-top: 1.5em;
+input {
+    width: 5em;
+    height: 2em;
+    border-color: gainsboro;
+    border-radius: 30px;
 }
 
-section.principal div p button{
-    margin: 5px;
+.consol {
+    display: flex;
+    justify-content: center;
 }
 
-div.collapse {
-    margin: 10px;
+.label {
+    color: grey;
+    margin-right: 2em;
+    width: 10em;
+    height: 2em;
+    text-align: end;
+}
+
+.collapse {
+    margin: 1em;
+    padding: 1em;
+    border: solid 1px #000;
+    border-radius: 30px;
+}
+
+.res {
+    border-radius: 10px;
+}
+
+.btn2 {
+    display: inline-block;
+    background-color: #7895CB;
+    color: white;
+    width: 10em;
+    height: 3em;
+    border: solid 1px;
+    border-radius: 10px;
+    font-size: 16px;
 }
