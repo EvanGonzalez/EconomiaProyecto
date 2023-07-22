@@ -1,7 +1,15 @@
 /* En este archivo se unirán todas las funcionalidades */
 /* POR FAVOR NO TOCAR */
 
-function calcularMontoCompuesto(C, I) {
+function calcularMontoCompuesto1(C, i, n){
+    if(n<=0||i<=0||R<=0){
+        return "Error, los datos no pueden ser menores a 1"
+    }else{
+  return C * Math.pow(1 + i, n);
+    }
+}
+
+function calcularMontoCompuesto2(C, I) {
     if(n<=0||i<=0||R<=0){
         return "Error, los datos no pueden ser menores a 1"
     }else{
