@@ -58,10 +58,8 @@ function imprimirCompuesto1(){
     let tasa = parseFloat(document.getElementById("TasaInteres").value);
     let periodos = parseFloat(document.getElementById("NumPeriodos").value);
     if(periodos!=0){
-        /* Se busca cuanto equivale tiempo según el periodo */
-        let n=calcularN(tiempo,periodo);
         /* Se busca cuanto equivale el interes segun el periodo */
-        let i=calcularI(interes/100,periodo);
+        let i=calcularI(tasa/100,periodos);
         let S=calcularMontoCompuesto1(C, i, n);
         /* p = parrafo en el Front */
         let p=document.getElementById("respuesta");
