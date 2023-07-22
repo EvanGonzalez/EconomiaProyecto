@@ -99,3 +99,7 @@ function calcularI(i,p){
 }
 
 /* Final funciones de anualidad */
+
+/* Inicio Interés compuesto */
+
+/* Final Interés compuesto */
