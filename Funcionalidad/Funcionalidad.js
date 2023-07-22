@@ -45,6 +45,29 @@ function imprimirA(){
     }
    
 }
+function imprimirS(){
+    /* Obteniedo los valores del Front-end */
+    let capital = parseFloat(document.getElementById("montoC2").value);
+    let tiempo = parseFloat(document.getElementById("tiempo2").value);
+    let periodo = parseInt(document.getElementById("periodo2").value);
+    let interes = parseFloat(document.getElementById("interesC2").value);
+    /* 0 = seleccionar un periodo */
+    if(periodo!=0){
+        /* Se busca cuanto equivale tiempo según el periodo */
+        let n=calcularN(tiempo,periodo);
+        /* Se busca cuanto equivale el interes segun el periodo */
+        let i=calcularI(interes/100,periodo);
+        /* Ya que tenemos todos los valores definidos ejecutamos la función que realiza los cálculos */
+        let S= calcularMontoAnualidad(n,i,capital);
+        /* p = parrafo en el Front */
+        let p=document.getElementById("resultS");
+        /* Se imprime el valor de A en el párrafo del front-end */
+        p.innerHTML = S;
+    }else{
+        alert("*** Debe seleccionar un periodo ***");
+    }
+   
+}
 function calcularN(t,p){
     /* 2 = Semestralmente */
     if(p==2){

@@ -91,9 +91,44 @@
                     </fieldset>
                 <h4 class="card-title">Calcular monto de una anualidad</h4><!-- Titulo del Card -->
                 <hr>
-                <div class="col-12">
-                    
-                </div>
+                <fieldset>
+                    <legend></legend><br>
+                        <!-- Texto de formula -->
+                        <label for="monto">Fórmula: A = R [1 - (1+i)^(-n)/i]</label><br/><br>
+                            <label for="periodo2" style="font-family: 'Times New Roman'; font-size: 20px;">Convertible:</label>
+                            <select name="" id="periodo2">
+                                <option value="0">Seleccione un periodo...</option>
+                                <option value="1">Anual</option>
+                                <option value="2">Semestral</option>
+                                <option value="3">Trimestral</option>
+                                <option value="4">Mensual</option>
+                            </select>
+                            <br><br>
+                            
+                        
+                            <!-- input para Monto -->
+                            <input type="number" id="montoC2" placeholder="Ingresa Capital">
+                            
+                           
+
+                            <!-- input para Interés -->
+                            <input type="number" id="interesC2" placeholder="Ingresa tasa de interés">
+
+                           
+
+                            <input type="number" id="tiempo2" placeholder="Ingresa tiempo">
+
+                            
+
+                            <!-- input tipo boton para calcular, llama a funcion calcular capital 1 -->
+                            <input type="button" id="btnCalcular2" value="¡Calcular!" onclick="imprimirS()"> <br><br>
+                        
+                        <div class="form-group">
+                            <label for="">Resultado: </label>
+                            <!-- Muestra resultado mediante id enviado desde la funcion calCapital1 -->
+                            <p for="" id="resultS"></p>
+                        </div>
+                    </fieldset>
         </section>
 
         <div class="holy-grail-sidebar-1 hg-sidebar" >
