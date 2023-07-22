@@ -62,7 +62,7 @@ function imprimirCompuesto1() {
         let n = calcularN(periodos, per);
         /* Se busca cuanto equivale el interes segun el periodo */
         let i = calcularI(tasa / 100, periodos);
-        let S = calcularMontoCompuesto1(capital, i, periodos);
+        let S = calcularMontoCompuesto1(capital, i, n);
         /* p = parrafo en el Front */
         let p = document.getElementById("respuesta");
         /* Se imprime el valor de A en el párrafo del front-end */
