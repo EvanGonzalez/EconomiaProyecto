@@ -1,6 +1,29 @@
 /* En este archivo se unirán todas las funcionalidades */
 /* POR FAVOR NO TOCAR */
 
+function calcularMontoCompuesto(C, I) {
+    if(n<=0||i<=0||R<=0){
+        return "Error, los datos no pueden ser menores a 1"
+    }else{
+  return C + I;
+    }
+}
+
+function calcularInteresCompuesto(S, C) {
+    if(n<=0||i<=0||R<=0){
+        return "Error, los datos no pueden ser menores a 1"
+    }else{
+  return S - C;
+    }
+}
+
+function calcularCapitalCompuesto(S, i, n) {
+    if(n<=0||i<=0||R<=0){
+        return "Error, los datos no pueden ser menores a 1"
+}else{
+  return S / Math.pow(1 + i, n);
+    }
+}
 
 /* Comienzo funciones de anualidad */
 function calcularMontoAnualidad(n,i,R){
