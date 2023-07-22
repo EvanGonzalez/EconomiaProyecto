@@ -1,4 +1,7 @@
-function calcularMontoCompuesto(C, I) {
+function calcularMontoCompuesto1(C, i, n){
+  return C * Math.pow(1 + i, n);
+}
+function calcularMontoCompuesto2(C, I) {
   return C + I;
 }
 
