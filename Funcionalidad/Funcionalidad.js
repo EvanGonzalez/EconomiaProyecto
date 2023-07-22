@@ -67,7 +67,9 @@ function imprimirCompuesto1(){
         let p=document.getElementById("respuesta");
         /* Se imprime el valor de A en el párrafo del front-end */
         p.innerHTML = S;
+    }
 }
+
 
 function imprimirA(){
     /* Obteniedo los valores del Front-end */
