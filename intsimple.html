@@ -120,43 +120,63 @@
 
             <!-- calcular interes -->
             <div id="input2" style="display: none;">
-                <input type="number" placeholder="Monto">
-                <input type="number" placeholder="Capital">
-                <input type="button" value="!Calcular!">
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado interés">
-                </div>
+                <fieldset>
+                    <legend>Ingrese los datos requeridos - Interés </legend><br>
+                    <input type="number" id="montois1" placeholder="Monto">
+                    <input type="number" id="capitalis1" placeholder="Capital">
+                    <input type="button" value="!Calcular!">
+                    <div class="form-group">
+                        <label for="">Resultado</label>
+                        <input type="number" class="form-control" readonly="" id="resultIis1"
+                            placeholder="Resultado interés">
+                    </div>
+                </fieldset>
             </div>
             <!-- fin de calcular interes -->
 
             <!-- calcular monto -->
             <div id="input3" style="display: none;">
-                <input type="number" placeholder="Capital">
-                <input type="number" placeholder="interes">
-                <input type="button" value="¡Calcular!">
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado monto">
-                </div>
+                <fieldset>
+                    <legend>Ingrese los datos requeridos - Monto </legend><br>
+                    <input type="number" id="capitalmis2" placeholder="Capital">
+                    <input type="number" id="interesmis2" placeholder="interes">
+                    <input type="button" value="¡Calcular!">
+                    <div class="form-group">
+                        <label for="">Resultado</label>
+                        <input type="number" class="form-control" readonly="" id="resultMis2"
+                            placeholder="Resultado monto">
+                    </div>
+                </fieldset>
             </div>
             <!-- finde calcular monto -->
 
             <!-- Calcular monto con tiempo -->
             <div id="input4" style="display: none;">
-                <input type="number" placeholder="Monto">
-                <input type="number" placeholder="Tiempo">
-                <input type="number" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
-                <input type="text" id="decimalInput" disabled>
-                <input type="button" value="¡Calcular!">
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado monto">
-                </div>
+                <fieldset>
+                    <legend>Ingrese los datos requeridos - Monto con tiempo </legend><br>
+                    <input type="number" id="capitalmis1" placeholder="Capital">
+                    <input type="number" id="tiempomis1" placeholder="Tiempo">
+                    <input type="number" id="tinteresmis1" placeholder="Tasa de interés" id="integerInput"
+                        onchange="convertToDecimal()">
+                    <!-- Radio button para pedir el tipo de tiempo -->
+                    <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
+                    <label for="anual">Años</label><br>
+                    <input type="radio" id="meses" name="tipotiempo" value="Meses">
+                    <label for="mensual">Meses</label><br>
+                    <input type="text" id="decimalInput" disabled>
+                    <input type="button" value="¡Calcular!">
+                    <div class="form-group">
+                        <label for="">Resultado</label>
+                        <input type="number" class="form-control" readonly="" id="resultMis1"
+                            placeholder="Resultado monto">
+                    </div>
+                </fieldset>
             </div>
             <!-- fin de calcular monto con tiempo -->
 
             <!-- calcular capital con tiempo -->
+
+
             <div id="input5" style="display: none;">
                 <br>
                 <fieldset>
@@ -198,21 +218,33 @@
                     </div>
                 </fieldset>
             </div>
-            <!-- fin de calcular capital con tiempo -->
 
+            <!-- fin de calcular capital con tiempo -->
             <!-- calcular interes con tiempo -->
             <div id="input6" style="display: none;">
-                <input type="number" placeholder="Monto">
-                <input type="number" placeholder="Tiempo">
-                <input type="number" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
-                <input type="text" id="decimalInput" disabled>
-                <input type="button" value="¡Calcular!">
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado interes">
-                </div>
+                <fieldset>
+                    <legend>Ingrese los datos requeridos - Interés con tiempo</legend><br>
+                    <input type="number" id="capitalis2" placeholder="Capital">
+                    <input type="number" id="tiempois2" placeholder="Tiempo">
+                    <!-- Radio button para pedir el tipo de tiempo -->
+                    <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
+                    <label for="anual">Años</label><br>
+                    <input type="radio" id="meses" name="tipotiempo" value="Meses">
+                    <label for="mensual">Meses</label><br>
+
+                    <input type="number" id="tinteresis2" placeholder="Tasa de interés" id="integerInput"
+                        onchange="convertToDecimal()">
+                    <input type="text" id="decimalInput" disabled>
+                    <input type="button" value="¡Calcular!">
+                    <div class="form-group">
+                        <label for="">Resultado</label>
+                        <input type="number" class="form-control" readonly="" id="resultIis2"
+                            placeholder="Resultado interes">
+                    </div>
+                </fieldset>
             </div>
             <!-- fin de calcular interes con tiempo -->
+
 
             <!-- calcular capital con tiempo segunda forma -->
             <div id="input7" style="display: none;">
@@ -247,6 +279,7 @@
                 </fieldset>
             </div>
             <!-- fin de calcular capital con tiempo segunda forma -->
+
 
             <!-- calcular tiempo -->
             <div id="input8" style="display: none;">
@@ -283,76 +316,87 @@
 
             <!-- calcular tiempo exacto -->
             <div id="input9" style="display: none;">
-                <label class="-field-date">
-                    <span>Fecha inicial</span>
-                    <input type="date" placeholder="Fecha inicial">
-                </label>
+                <fieldset>
+                    <legend>Ingrese los datos requeridos - Tiempo Exacto</legend><br>
+                    <label class="-field-date">
+                        <span>Fecha inicial</span>
+                        <input type="date" placeholder="Fecha inicial">
+                    </label>
 
-                <label for="Fecha Inicial"></label>
-                <label class="-field-date">
-                    <span>Fecha final</span>
-                    <input type="date" placeholder="Fecha final">
-                </label>
-                <input type="button" value="¡Calcular!">
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero"
-                        placeholder="Resultado tiempo exacto">
-                </div>
+                    <label for="Fecha Inicial"></label>
+                    <label class="-field-date">
+                        <span>Fecha final</span>
+                        <input type="date" placeholder="Fecha final">
+                    </label>
+                    <input type="button" value="¡Calcular!">
+                    <div class="form-group">
+                        <label for="">Resultado</label>
+                        <input type="number" class="form-control" readonly="" id="entero"
+                            placeholder="Resultado tiempo exacto">
+                    </div>
+                </fieldset>
             </div>
             <!-- fin de calcular tiempo exacto -->
 
 
             <!-- calcular tiempo aproximado -->
             <div id="input10" style="display: none;">
-                <label class="-field-date">
-                    <span>Fecha inicial</span>
-                    <input type="date" placeholder="Fecha inicial">
-                </label>
+                <fieldset>
+                    <legend>Ingrese los datos requeridos - Tiempo Aproximado</legend><br>
+                    <label class="-field-date">
+                        <span>Fecha inicial</span>
+                        <input type="date" placeholder="Fecha inicial">
+                    </label>
 
-                <label for="Fecha Inicial"></label>
-                <label class="-field-date">
-                    <span>Fecha final</span>
-                    <input type="date" placeholder="Fecha final">
-                </label>
-                <input type="button" value="¡Calcular!">
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero"
-                        placeholder="Resultado tiempo aproximado">
-                </div>
+                    <label for="Fecha Inicial"></label>
+                    <label class="-field-date">
+                        <span>Fecha final</span>
+                        <input type="date" placeholder="Fecha final">
+                    </label>
+                    <input type="button" value="¡Calcular!">
+                    <div class="form-group">
+                        <label for="">Resultado</label>
+                        <input type="number" class="form-control" readonly="" id="entero"
+                            placeholder="Resultado tiempo aproximado">
+                    </div>
+                </fieldset>
             </div>
 
 
             <!-- fin de calcular tiempo aproximado -->
 
-
             <!-- calcular interes simple exacto -->
             <div id="input11" style="display: none;">
-                <input type="number" placeholder="Tiempo">
-                <input type="number" placeholder="Capital">
-                <input type="number" placeholder="Tasa de interés">
-                <input type="button" value="¡Calcular!">
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero"
-                        placeholder="Resultado interés exacto">
-                </div>
+                <fieldset>
+                    <legend>Ingrese los datos requeridos - Interés simple exacto </legend><br>
+                    <input type="number" placeholder="Tiempo">
+                    <input type="number" placeholder="Capital">
+                    <input type="number" placeholder="Tasa de interés">
+                    <input type="button" value="¡Calcular!">
+                    <div class="form-group">
+                        <label for="">Resultado</label>
+                        <input type="number" class="form-control" readonly="" id="entero"
+                            placeholder="Resultado interés exacto">
+                    </div>
+                </fieldset>
             </div>
             <!-- fin de calcular interes simple exacto -->
 
 
             <!-- calcular interes simple ordinario -->
             <div id="input12" style="display: none;">
-                <input type="number" placeholder="Tiempo">
-                <input type="number" placeholder="Capital">
-                <input type="number" placeholder="Tasa de interés">
-                <input type="button" value="¡Calcular!">
-                <div class="form-group">
-                    <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero"
-                        placeholder="Resultado interés ordinario">
-                </div>
+                <fieldset>
+                    <legend>Ingrese los datos requeridos - Interés simple ordinario </legend><br>
+                    <input type="number" placeholder="Tiempo">
+                    <input type="number" placeholder="Capital">
+                    <input type="number" placeholder="Tasa de interés">
+                    <input type="button" value="¡Calcular!">
+                    <div class="form-group">
+                        <label for="">Resultado</label>
+                        <input type="number" class="form-control" readonly="" id="entero"
+                            placeholder="Resultado interés ordinario">
+                    </div>
+                </fieldset>
             </div>
             <!-- fin de calcular interes simple ordinario -->
 

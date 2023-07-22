@@ -1,6 +1,37 @@
 /* En este archivo se unirán todas las funcionalidades */
 /* POR FAVOR NO TOCAR */
 
+function calcularMontoCompuesto1(C, i, n){
+    if(n<=0||i<=0||R<=0){
+        return "Error, los datos no pueden ser menores a 1"
+    }else{
+  return C * Math.pow(1 + i, n);
+    }
+}
+
+function calcularMontoCompuesto2(C, I) {
+    if(n<=0||i<=0||R<=0){
+        return "Error, los datos no pueden ser menores a 1"
+    }else{
+  return C + I;
+    }
+}
+
+function calcularInteresCompuesto(S, C) {
+    if(n<=0||i<=0||R<=0){
+        return "Error, los datos no pueden ser menores a 1"
+    }else{
+  return S - C;
+    }
+}
+
+function calcularCapitalCompuesto(S, i, n) {
+    if(n<=0||i<=0||R<=0){
+        return "Error, los datos no pueden ser menores a 1"
+}else{
+  return S / Math.pow(1 + i, n);
+    }
+}
 
 /* Comienzo funciones de anualidad */
 function calcularMontoAnualidad(n,i,R){
@@ -21,6 +52,22 @@ function calcularValorPresenteAnualidad(n,i,R){
         return A.toFixed(2);
     }
 }
+
+function imprimirCompuesto1(){
+    let capital = parseFloat(document.getElementById("Capital").value);
+    let tasa = parseFloat(document.getElementById("TasaInteres").value);
+    let periodos = parseFloat(document.getElementById("NumPeriodos").value);
+    if(periodos!=0){
+        /* Se busca cuanto equivale el interes segun el periodo */
+        let i=calcularI(tasa/100,periodos);
+        let S=calcularMontoCompuesto1(C, i, n);
+        /* p = parrafo en el Front */
+        let p=document.getElementById("respuesta");
+        /* Se imprime el valor de A en el párrafo del front-end */
+        p.innerHTML = S;
+    }
+}
+
 
 function imprimirA(){
     /* Obteniedo los valores del Front-end */
