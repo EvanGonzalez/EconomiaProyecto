@@ -57,8 +57,9 @@ function imprimirCompuesto1() {
     let capital = parseFloat(document.getElementById("Capital").value);
     let tasa = parseFloat(document.getElementById("TasaInteres").value);
     let periodos = parseFloat(document.getElementById("NumPeriodos").value);
+    let per = parseInt(document.getElementById("periodo").value);
     if (periodos != 0) {
-        let n = calcularN(periodos);
+        let n = calcularN(periodos, per);
         /* Se busca cuanto equivale el interes segun el periodo */
         let i = calcularI(tasa / 100, periodos);
         let S = calcularMontoCompuesto1(capital, i, periodos);
