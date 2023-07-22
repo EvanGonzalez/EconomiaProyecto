@@ -53,6 +53,22 @@ function calcularValorPresenteAnualidad(n,i,R){
     }
 }
 
+function imprimirCompuesto1(){
+    let capital = parseFloat(document.getElementById("Capital").value);
+    let tasa = parseFloat(document.getElementById("TasaInteres").value);
+    let periodos = parseFloat(document.getElementById("NumPeriodos").value);
+    if(periodos!=0){
+        /* Se busca cuanto equivale tiempo según el periodo */
+        let n=calcularN(tiempo,periodo);
+        /* Se busca cuanto equivale el interes segun el periodo */
+        let i=calcularI(interes/100,periodo);
+        let S=calcularMontoCompuesto1(C, i, n);
+        /* p = parrafo en el Front */
+        let p=document.getElementById("respuesta");
+        /* Se imprime el valor de A en el párrafo del front-end */
+        p.innerHTML = S;
+}
+
 function imprimirA(){
     /* Obteniedo los valores del Front-end */
     let capital = parseFloat(document.getElementById("montoC1").value);
