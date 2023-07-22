@@ -120,38 +120,43 @@
 
             <!-- calcular interes -->
             <div id="input2" style="display: none;">
-                <input type="number" placeholder="Monto">
-                <input type="number" placeholder="Capital">
+                <input type="number" id="montois1" placeholder="Monto">
+                <input type="number" id="capitalis1" placeholder="Capital">
                 <input type="button" value="!Calcular!">
                 <div class="form-group">
                     <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado interés">
+                    <input type="number" class="form-control" readonly="" id="resultIis1" placeholder="Resultado interés">
                 </div>
             </div>
             <!-- fin de calcular interes -->
 
             <!-- calcular monto -->
             <div id="input3" style="display: none;">
-                <input type="number" placeholder="Capital">
-                <input type="number" placeholder="interes">
+                <input type="number" id="capitalmis2" placeholder="Capital">
+                <input type="number" id="interesmis2" placeholder="interes">
                 <input type="button" value="¡Calcular!">
                 <div class="form-group">
                     <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado monto">
+                    <input type="number" class="form-control" readonly="" id="resultMis2" placeholder="Resultado monto">
                 </div>
             </div>
             <!-- finde calcular monto -->
 
             <!-- Calcular monto con tiempo -->
             <div id="input4" style="display: none;">
-                <input type="number" placeholder="Monto">
-                <input type="number" placeholder="Tiempo">
-                <input type="number" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
+                <input type="number" id="capitalmis1" placeholder="Capital">
+                <input type="number" id="tiempomis1" placeholder="Tiempo">
+                <input type="number" id="tinteresmis1" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
+                <!-- Radio button para pedir el tipo de tiempo -->
+                <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
+                <label for="anual">Años</label><br>
+                <input type="radio" id="meses" name="tipotiempo" value="Meses">
+                <label for="mensual">Meses</label><br>
                 <input type="text" id="decimalInput" disabled>
                 <input type="button" value="¡Calcular!">
                 <div class="form-group">
                     <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado monto">
+                    <input type="number" class="form-control" readonly="" id="resultMis1" placeholder="Resultado monto">
                 </div>
             </div>
             <!-- fin de calcular monto con tiempo -->
@@ -202,14 +207,20 @@
 
             <!-- calcular interes con tiempo -->
             <div id="input6" style="display: none;">
-                <input type="number" placeholder="Monto">
-                <input type="number" placeholder="Tiempo">
-                <input type="number" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
+                <input type="number" id="capitalis2" placeholder="Capital">
+                <input type="number" id="tiempois2" placeholder="Tiempo">
+                <!-- Radio button para pedir el tipo de tiempo -->
+                <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
+                <label for="anual">Años</label><br>
+                <input type="radio" id="meses" name="tipotiempo" value="Meses">
+                <label for="mensual">Meses</label><br>
+
+                <input type="number" id="tinteresis2" placeholder="Tasa de interés" id="integerInput" onchange="convertToDecimal()">
                 <input type="text" id="decimalInput" disabled>
                 <input type="button" value="¡Calcular!">
                 <div class="form-group">
                     <label for="">Resultado</label>
-                    <input type="number" class="form-control" readonly="" id="entero" placeholder="Resultado interes">
+                    <input type="number" class="form-control" readonly="" id="resultIis2" placeholder="Resultado interes">
                 </div>
             </div>
             <!-- fin de calcular interes con tiempo -->
