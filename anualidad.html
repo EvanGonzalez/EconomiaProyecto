@@ -1,3 +1,4 @@
+<script src="Funcionalidad/funcionalidad.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +55,15 @@
                     <legend></legend><br>
                         <!-- Texto de formula -->
                         <label for="monto">Fórmula: A = R [1 - (1+i)^(-n)/i]</label><br/><br>
-                            
+                            <label for="periodo" style="font-family: 'Times New Roman'; font-size: 20px;">Convertible:</label>
+                            <select name="" id="periodo">
+                                <option value="0">Seleccione un periodo...</option>
+                                <option value="1">Anual</option>
+                                <option value="2">Semestral</option>
+                                <option value="3">Trimestral</option>
+                                <option value="4">Mensual</option>
+                            </select>
+                            <br><br>
                             A=&nbsp;&nbsp;
                         
                             <!-- input para Monto -->
@@ -67,17 +76,17 @@
 
                             &nbsp;) ^ (&nbsp;-&nbsp;
 
-                            <input type="number" id="interesC1" placeholder="Ingresa tiempo">
+                            <input type="number" id="tiempo" placeholder="Ingresa tiempo">
 
                             &nbsp;) / i ]&nbsp; </br></br>
 
                             <!-- input tipo boton para calcular, llama a funcion calcular capital 1 -->
-                            <input type="button" value="¡Calcular!" onclick="calCapital1()"> <br><br>
+                            <input type="button" id="btnCalcular" value="¡Calcular!" onclick="imprimirA()"> <br><br>
                         
                         <div class="form-group">
                             <label for="">Resultado: </label>
                             <!-- Muestra resultado mediante id enviado desde la funcion calCapital1 -->
-                            <p for="" id="resultcalCapital1"></p>
+                            <p for="" id="resultA"></p>
                         </div>
                     </fieldset>
                 <h4 class="card-title">Calcular monto de una anualidad</h4><!-- Titulo del Card -->
@@ -104,4 +113,3 @@
 </body>
 
 </html>
-<script ></script>
