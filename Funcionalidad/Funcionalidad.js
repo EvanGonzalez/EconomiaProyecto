@@ -2,7 +2,7 @@
 /* POR FAVOR NO TOCAR */
 
 function calcularMontoCompuesto1(C, i, n) {
-    if (n <= 0 || i <= 0 || R <= 0) {
+    if (C <= 0 || i <= 0 || n <= 0) {
         return "Error, los datos no pueden ser menores a 1"
     } else {
         return C * Math.pow(1 + i, n);
@@ -10,7 +10,7 @@ function calcularMontoCompuesto1(C, i, n) {
 }
 
 function calcularMontoCompuesto2(C, I) {
-    if (n <= 0 || i <= 0 || R <= 0) {
+    if (C <= 0 || I <= 0) {
         return "Error, los datos no pueden ser menores a 1"
     } else {
         return C + I;
@@ -18,7 +18,7 @@ function calcularMontoCompuesto2(C, I) {
 }
 
 function calcularInteresCompuesto(S, C) {
-    if (n <= 0 || i <= 0 || R <= 0) {
+    if (S <= 0 || C <= 0) {
         return "Error, los datos no pueden ser menores a 1"
     } else {
         return S - C;
@@ -26,7 +26,7 @@ function calcularInteresCompuesto(S, C) {
 }
 
 function calcularCapitalCompuesto(S, i, n) {
-    if (n <= 0 || i <= 0 || R <= 0) {
+    if (S <= 0 || i <= 0 || n <= 0) {
         return "Error, los datos no pueden ser menores a 1"
     } else {
         return S / Math.pow(1 + i, n);
