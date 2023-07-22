@@ -107,13 +107,6 @@
                         <div class="card card-body">
                             <div class="row">
                             <h2>Calculo de Monto Compuesto 2</h2>
-                            <select name="" id="periodo">
-                                <option value="0">Seleccione un periodo...</option>
-                                <option value="1">Anual</option>
-                                <option value="2">Semestral</option>
-                                <option value="3">Trimestral</option>
-                                <option value="4">Mensual</option>
-                                </select>
     
                                 <div class="col-md-8">
                                     <div class="consol">
@@ -127,7 +120,13 @@
                                         <div class="col-sm-10">
                                         <input type="number" class="form-control" id="Interes">
                                         </div>
-                                    </div>                                
+                                    </div> 
+                                     <div class="colaider">
+                            <button class="btn2" onClick="imprimirCompuesto2()">Calcular</button>
+                        </div>
+                        <div class="colaider">
+                            <p class="res" id="respuesta"></p>  
+                        </div>
                                 </div>
                                 <div class="col-md-4">
                                     
@@ -138,13 +137,6 @@
                     <div class="collapse" id="interesCompuesto">
                         <div class="card card-body">
                             <h2>Calcular Interes Compuesto</h2>
-                            <select name="" id="periodo">
-                                <option value="0">Seleccione un periodo...</option>
-                                <option value="1">Anual</option>
-                                <option value="2">Semestral</option>
-                                <option value="3">Trimestral</option>
-                                <option value="4">Mensual</option>
-                            </select>
                             <div class="consol">
                                 <label for="Capital" class="label">Capitla</label>
                                 <div class="col-sm-10">
@@ -158,7 +150,7 @@
                                 </div>
                             </div>
                         <div class="colaider">
-                            <button class="btn2" onClick="imprimirCompuesto2()">Calcular</button>
+                            <button class="btn2" onClick="imprimirCompuesto3()">Calcular</button>
                         </div>
                         <div class="colaider">
                             <p class="res" id="respuesta"></p>  
@@ -186,6 +178,12 @@
                                 <input type="number" class="form-control" id="NumPeriodos">
                                 </div>
                             </div>
+                             <div class="colaider">
+                            <button class="btn2" onClick="imprimirCompuesto4()">Calcular</button>
+                        </div>
+                        <div class="colaider">
+                            <p class="res" id="respuesta"></p>  
+                        </div>
                         </div>
                     </div>
                     
