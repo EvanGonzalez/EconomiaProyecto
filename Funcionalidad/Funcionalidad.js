@@ -69,6 +69,47 @@ function imprimirCompuesto1() {
         p.innerHTML = S;
     }
 }
+function imprimirCompuesto2() {
+    let capital = parseFloat(document.getElementById("Capital").value);
+    let interes = parseFloat(document.getElementById("Interes").value);
+        let S = calcularMontoCompuesto1(capital, interes);
+        /* p = parrafo en el Front */
+        let p = document.getElementById("respuesta");
+        /* Se imprime el valor de A en el párrafo del front-end */
+        p.innerHTML = S;
+}
+function imprimirCompuesto3() {
+    let capital = parseFloat(document.getElementById("Capital").value);
+    let tasa = parseFloat(document.getElementById("TasaInteres").value);
+    let periodos = parseFloat(document.getElementById("NumPeriodos").value);
+    let per = parseInt(document.getElementById("periodo").value);
+    if (periodos != 0) {
+        let n = calcularN(periodos, per);
+        /* Se busca cuanto equivale el interes segun el periodo */
+        let i = calcularI(tasa / 100, periodos);
+        let S = calcularMontoCompuesto1(capital, i, n);
+        /* p = parrafo en el Front */
+        let p = document.getElementById("respuesta");
+        /* Se imprime el valor de A en el párrafo del front-end */
+        p.innerHTML = S;
+    }
+}
+function imprimirCompuesto4() {
+    let capital = parseFloat(document.getElementById("Capital").value);
+    let tasa = parseFloat(document.getElementById("TasaInteres").value);
+    let periodos = parseFloat(document.getElementById("NumPeriodos").value);
+    let per = parseInt(document.getElementById("periodo").value);
+    if (periodos != 0) {
+        let n = calcularN(periodos, per);
+        /* Se busca cuanto equivale el interes segun el periodo */
+        let i = calcularI(tasa / 100, periodos);
+        let S = calcularMontoCompuesto1(capital, i, n);
+        /* p = parrafo en el Front */
+        let p = document.getElementById("respuesta");
+        /* Se imprime el valor de A en el párrafo del front-end */
+        p.innerHTML = S;
+    }
+}
 
 
 function imprimirA() {
