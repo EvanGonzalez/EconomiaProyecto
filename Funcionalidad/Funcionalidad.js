@@ -1,6 +1,6 @@
 /* En este archivo se unirán todas las funcionalidades */
 /* POR FAVOR NO TOCAR */
-//hola
+
 function calcularMontoCompuesto1(C, i, n) {
     if (C <= 0 || i <= 0 || n <= 0) {
         return "Error, los datos no pueden ser menores a 1"
