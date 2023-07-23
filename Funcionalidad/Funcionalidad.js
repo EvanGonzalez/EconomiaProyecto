@@ -88,19 +88,19 @@ function imprimirCompuesto3() {
         p.innerHTML = I;
 }
 function imprimirCompuesto4() {
-    let capital = parseFloat(document.getElementById("Capital").value);
-    let tasa = parseFloat(document.getElementById("TasaInteres").value);
-    let periodos = parseFloat(document.getElementById("NumPeriodos").value);
-    let per = parseInt(document.getElementById("periodo").value);
+    let monto = parseFloat(document.getElementById("Monto1").value);
+    let tasa = parseFloat(document.getElementById("TasaInteres1").value);
+    let periodos = parseFloat(document.getElementById("NumPeriodos1").value);
+    let per = parseInt(document.getElementById("periodo1").value);
     if (periodos != 0) {
         let n = calcularN(periodos, per);
         /* Se busca cuanto equivale el interes segun el periodo */
         let i = calcularI(tasa / 100, periodos);
-        let S = calcularMontoCompuesto1(capital, i, n);
+        let C = calcularCapitalCompuesto(monto, i, n);
         /* p = parrafo en el Front */
-        let p = document.getElementById("respuesta");
+        let p = document.getElementById("respuesta4");
         /* Se imprime el valor de A en el párrafo del front-end */
-        p.innerHTML = S;
+        p.innerHTML = C;
     }
 }
 
