@@ -11,6 +11,28 @@ function convertToDecimal() {
 
   decimalInput.value = decimalValue.toFixed(2); // Limitar a 2 decimales
 }
+//  para desaparecer botones 
+function handleButtonClick(button) {
+    // Obtener todos los botones con la clase "boton-controlable"
+    const buttons = document.getElementsByClassName('boton-controlable');
+
+    // Deshabilitar todos los botones excepto el botón clickeado
+    for (let i = 0; i < buttons.length; i++) {
+        if (buttons[i] !== button) {
+            buttons[i].disabled = true;
+        }
+    }
+
+    // Volver a habilitar los botones después de un tiempo (puedes ajustar el tiempo según tus necesidades)
+    setTimeout(function() {
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = false;
+        }
+    }, 3000); // Aquí, los botones se habilitarán después de 3 segundos (3000 milisegundos)
+}
+
+// fin de  desaparecer botones 
+
 
 function showInput(inputId) {
   var input = document.getElementById(inputId);
@@ -25,20 +47,7 @@ function showInput(inputId) {
   }
 }
 
-function disableOtherButtons(selectedInputId, buttons) {
-  for (var i = 0; i < buttons.length; i++) {
-    var button = buttons[i];
-    if (button.id !== "button" + selectedInputId.slice(5)) {
-      button.disabled = true;
-    }
-  }
-}
 
-function enableAllButtons(buttons) {
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].disabled = false;
-  }
-}
 
 //variables captadas para el resultado.
 const resultCapital1 = document.querySelector("#resultcalCapital1");
