@@ -55,7 +55,7 @@
 }
 
 /* estilo de boton 2 */
-.boton {
+.button {
   color: #fff !important;
   padding: 0.5em 1.2em;
   border: 2px solid;
@@ -66,7 +66,7 @@
   
 }
 
-.boton:before {
+.button:before {
   content: "";
   position: absolute;
   top: 0px;
@@ -76,7 +76,7 @@
   background: rgba(255, 255, 255, 0.1);
   transition: all 1s ease;
 }
-.boton:hover:before {
+.button:hover:before {
   width: 100%;
 }
 
@@ -90,3 +90,38 @@
   font-size: 30px;
   margin: 12px;
 }
+
+
+.button {
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    background: #7f8c8d;
+    padding: 7px 20px;
+    white-space: nowrap;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 100px;
+    margin: 10px 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .button {
+    background: #7895cb;
+    box-shadow: 0px 5px 0px 0px #a0bfe0;
+  }
+  
+  .button:hover {
+    background: #4a55a2;
+  }
+  
+  .button:active {
+    box-shadow: 0px 2px 0px 0px #a0bfe0;
+  }
+  
