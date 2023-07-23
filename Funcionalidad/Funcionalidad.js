@@ -70,7 +70,7 @@ function imprimirCompuesto1() {
     }
 }
 function imprimirCompuesto2() {
-    let capital = parseFloat(document.getElementById("Capital").value);
+    let capital = parseFloat(document.getElementById("Capital1").value);
     let interes = parseFloat(document.getElementById("Interes").value);
         let S = calcularMontoCompuesto2(capital, interes);
         /* p = parrafo en el Front */
