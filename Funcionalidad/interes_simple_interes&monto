@@ -101,24 +101,20 @@ function imprimirIs2(){
     let elementoActivo = document.querySelector('input[name="tipotiempo"]:checked').value;
     if(elementoActivo == "Anos"){
         let I=C*(i/100)*(t);
-        return  p.innerHTML = I.toFixed(2);
+        p.innerHTML = I.toFixed(2);
     }else{
         //sino si la tasa es anual y el tiempo es en meses, se divide el tiempo entre 12
-        if(elementoActivo == "Meses"){
-            let I=C*(i/100)*(t/12);
-            return  p.innerHTML = I.toFixed(2);
-        }else{
-            //si no se selecciona nada en los radio
-            if(elementoActivo == "" ){
-                //alerta de error
-                var resAlert = window.alert("Error. No selecciono una opción.");
-                return p.innerHTML = "";
-            }
-        }
+        
+        let I=C*(i/100)*(t/12);
+        p.innerHTML = I.toFixed(2);
+        
     }
    }
    function imprimirMs1(){
-    /* Obteniedo los valores del Front-end */
+    /* Obteniedo los valores del Front-end 
+    
+    Aqui terminé
+    */
     let C = parseFloat(document.getElementById("capitalmis1").value);
     let i = parseFloat(document.getElementById("tiempomis1").value);
     let t = parseFloat(document.getElementById("tinteresmis1").value);

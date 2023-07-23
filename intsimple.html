@@ -1,3 +1,4 @@
+<script src="Funcionalidad/interes_simple_interes&monto"></script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,11 +125,10 @@
                     <legend>Ingrese los datos requeridos - Interés </legend><br>
                     <input type="number" id="montois1" placeholder="Monto">
                     <input type="number" id="capitalis1" placeholder="Capital">
-                    <input type="button" value="!Calcular!">
+                    <input type="button" onclick="imprimirIs1();" value="!Calcular!">
                     <div class="form-group">
                         <label for="">Resultado</label>
-                        <input type="number" class="form-control" readonly="" id="resultIis1"
-                            placeholder="Resultado interés">
+                        <p id="resultIis1"></p>
                     </div>
                 </fieldset>
             </div>
@@ -158,17 +158,15 @@
                     <input type="number" id="tiempomis1" placeholder="Tiempo">
                     <input type="number" id="tinteresmis1" placeholder="Tasa de interés" id="integerInput"
                         onchange="convertToDecimal()">
-                    <!-- Radio button para pedir el tipo de tiempo -->
+                    <!-- Radio button para pedir el tipo de tiempo --> <br>
                     <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
                     <label for="anual">Años</label><br>
                     <input type="radio" id="meses" name="tipotiempo" value="Meses">
                     <label for="mensual">Meses</label><br>
-                    <input type="text" id="decimalInput" disabled>
-                    <input type="button" value="¡Calcular!">
+                    <input type="button" onclick="" value="¡Calcular!">
                     <div class="form-group">
                         <label for="">Resultado</label>
-                        <input type="number" class="form-control" readonly="" id="resultMis1"
-                            placeholder="Resultado monto">
+                        <p id="resultMis1"></p>
                     </div>
                 </fieldset>
             </div>
@@ -227,19 +225,18 @@
                     <input type="number" id="capitalis2" placeholder="Capital">
                     <input type="number" id="tiempois2" placeholder="Tiempo">
                     <!-- Radio button para pedir el tipo de tiempo -->
+                    
+
+                    <input type="number" id="tinteresis2" placeholder="Tasa de interés" id="integerInput"
+                        onchange="convertToDecimal()">
                     <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
                     <label for="anual">Años</label><br>
                     <input type="radio" id="meses" name="tipotiempo" value="Meses">
                     <label for="mensual">Meses</label><br>
-
-                    <input type="number" id="tinteresis2" placeholder="Tasa de interés" id="integerInput"
-                        onchange="convertToDecimal()">
-                    <input type="text" id="decimalInput" disabled>
-                    <input type="button" value="¡Calcular!">
+                    <input type="button" onclick="imprimirIs2();" value="¡Calcular!">
                     <div class="form-group">
                         <label for="">Resultado</label>
-                        <input type="number" class="form-control" readonly="" id="resultIis2"
-                            placeholder="Resultado interes">
+                        <p id="resultIis2"></p>
                     </div>
                 </fieldset>
             </div>

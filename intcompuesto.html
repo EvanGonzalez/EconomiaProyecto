@@ -107,19 +107,12 @@
                         <div class="card card-body">
                             <div class="row">
                             <h2>Calculo de Monto Compuesto 2</h2>
-                            <select name="" id="periodo">
-                                <option value="0">Seleccione un periodo...</option>
-                                <option value="1">Anual</option>
-                                <option value="2">Semestral</option>
-                                <option value="3">Trimestral</option>
-                                <option value="4">Mensual</option>
-                                </select>
     
                                 <div class="col-md-8">
                                     <div class="consol">
-                                        <label for="Capital" class="label">Capital</label>
+                                        <label for="Capital1" class="label">Capital</label>
                                         <div class="col-sm-10">
-                                        <input type="number" class="form-control" id="Capital">
+                                        <input type="number" class="form-control" id="Capital1">
                                         </div>
                                     </div>
                                     <div class="consol">
@@ -127,59 +120,76 @@
                                         <div class="col-sm-10">
                                         <input type="number" class="form-control" id="Interes">
                                         </div>
-                                    </div>                                
-                                </div>
-                                <div class="col-md-4">
-                                    
+                                    </div> 
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        <div class="colaider">
+                            <button class="btn2" onClick="imprimirCompuesto2()">Calcular</button>
+                        </div>
+                        <div class="colaider">
+                            <p class="res" id="respuesta2"></p>  
+                        </div>
+                        
                     </div>
                     <div class="collapse" id="interesCompuesto">
                         <div class="card card-body">
                             <h2>Calcular Interes Compuesto</h2>
-                            <select name="" id="periodo">
-                                <option value="0">Seleccione un periodo...</option>
-                                <option value="1">Anual</option>
-                                <option value="2">Semestral</option>
-                                <option value="3">Trimestral</option>
-                                <option value="4">Mensual</option>
-                            </select>
-                            <div class="consol">
-                                <label for="Capital" class="label">Capitla</label>
-                                <div class="col-sm-10">
-                                <input type="number" class="form-control" id="Capital">
-                                </div>
-                            </div>
                             <div class="consol">
                                 <label for="Monto" class="label">Monto</label>
                                 <div class="col-sm-10">
                                 <input type="number" class="form-control" id="Monto">
                                 </div>
                             </div>
+                            <div class="consol">
+                                <label for="Capital2" class="label">Capital</label>
+                                <div class="col-sm-10">
+                                <input type="number" class="form-control" id="Capital2">
+                                </div>
+                            </div>
+                        <div class="colaider">
+                            <button class="btn2" onClick="imprimirCompuesto3()">Calcular</button>
+                        </div>
+                        <div class="colaider">
+                            <p class="res" id="respuesta3"></p>  
+                        </div>
                         </div>
                     </div>
                     <div class="collapse" id="capitalCompuesto">
                         <div class="card card-body">
                             <h2>Calcular Capital Compuesto</h2>
+                                <select name="" id="periodo1">
+                                <option value="0">Seleccione un periodo...</option>
+                                <option value="1">Anual</option>
+                                <option value="2">Semestral</option>
+                                <option value="3">Trimestral</option>
+                                <option value="4">Mensual</option>
+                                    </select>
                             <div class="consol">
-                                <label for="Monto" class="label">Monto</label>
+                                <label for="Monto1" class="label">Monto</label>
                                 <div class="col-sm-10">
-                                <input type="number" class="form-control" id="Monto">
+                                <input type="number" class="form-control" id="Monto1">
                                 </div>
                             </div>
                             <div class="consol">
-                                <label for="TasaInteres" class="label">Tasa de Interes</label>
+                                <label for="TasaInteres1" class="label">Tasa de Interes</label>
                                 <div class="col-sm-10">
-                                <input type="number" class="form-control" id="TasaInteres">
+                                <input type="number" class="form-control" id="TasaInteres1">
                                 </div>
                             </div>
                             <div class="consol">
-                                <label for="NumPeriodos" class="label">numero de Periodos</label>
+                                <label for="NumPeriodos1" class="label">numero de Periodos</label>
                                 <div class="col-sm-10">
-                                <input type="number" class="form-control" id="NumPeriodos">
+                                <input type="number" class="form-control" id="NumPeriodos1">
                                 </div>
                             </div>
+                             <div class="colaider">
+                            <button class="btn2" onClick="imprimirCompuesto4()">Calcular</button>
+                        </div>
+                        <div class="colaider">
+                            <p class="res" id="respuesta4"></p>  
+                        </div>
                         </div>
                     </div>
                     
