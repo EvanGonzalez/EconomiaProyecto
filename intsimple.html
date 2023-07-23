@@ -320,19 +320,18 @@
                     <legend>Ingrese los datos requeridos - Tiempo Exacto</legend><br>
                     <label class="-field-date">
                         <span>Fecha inicial</span>
-                        <input type="date" placeholder="Fecha inicial">
+                        <input type="date" placeholder="Fecha inicial" id="Fechainicial">
                     </label>
 
                     <label for="Fecha Inicial"></label>
                     <label class="-field-date">
                         <span>Fecha final</span>
-                        <input type="date" placeholder="Fecha final">
+                        <input type="date" placeholder="Fecha final" id="FechaFinal">
                     </label>
-                    <input type="button" value="¡Calcular!">
+                    <input type="button" value="¡Calcular!" onclick="tiempoExacto()">
                     <div class="form-group">
                         <label for="">Resultado</label>
-                        <input type="number" class="form-control" readonly="" id="entero"
-                            placeholder="Resultado tiempo exacto">
+                        <p id="resultado5"></p>
                     </div>
                 </fieldset>
             </div>
@@ -345,19 +344,18 @@
                     <legend>Ingrese los datos requeridos - Tiempo Aproximado</legend><br>
                     <label class="-field-date">
                         <span>Fecha inicial</span>
-                        <input type="date" placeholder="Fecha inicial">
+                        <input type="date" placeholder="Fecha inicial" id="Fechainicial2">
                     </label>
 
                     <label for="Fecha Inicial"></label>
                     <label class="-field-date">
                         <span>Fecha final</span>
-                        <input type="date" placeholder="Fecha final">
+                        <input type="date" placeholder="Fecha final" id="FechaFinal2">
                     </label>
-                    <input type="button" value="¡Calcular!">
+                    <input type="button" value="¡Calcular!" onclick="tiempoAproximado()">
                     <div class="form-group">
                         <label for="">Resultado</label>
-                        <input type="number" class="form-control" readonly="" id="entero"
-                            placeholder="Resultado tiempo aproximado">
+                        <p id="resultado77"></p>
                     </div>
                 </fieldset>
             </div>
@@ -369,14 +367,14 @@
             <div id="input11" style="display: none;">
                 <fieldset>
                     <legend>Ingrese los datos requeridos - Interés simple exacto </legend><br>
-                    <input type="number" placeholder="Tiempo">
-                    <input type="number" placeholder="Capital">
-                    <input type="number" placeholder="Tasa de interés">
-                    <input type="button" value="¡Calcular!">
+                    <input type="number" placeholder="Tiempo" id="Tiempo101">
+                    <input type="number" placeholder="Capital" id="Capital101">
+                    <input type="number" placeholder="Tasa de interés" id="Tasa101">
+                    <input type="button" value="¡Calcular!" onclick="calcularInteresExacto()">
                     <div class="form-group">
                         <label for="">Resultado</label>
-                        <input type="number" class="form-control" readonly="" id="entero"
-                            placeholder="Resultado interés exacto">
+                        
+                            <p id="resultado"></p>
                     </div>
                 </fieldset>
             </div>
@@ -387,14 +385,14 @@
             <div id="input12" style="display: none;">
                 <fieldset>
                     <legend>Ingrese los datos requeridos - Interés simple ordinario </legend><br>
-                    <input type="number" placeholder="Tiempo">
-                    <input type="number" placeholder="Capital">
-                    <input type="number" placeholder="Tasa de interés">
-                    <input type="button" value="¡Calcular!">
+                    <input type="number" placeholder="Tiempo" id="Tiempo102">
+                    <input type="number" placeholder="Capital" id="Capital102">
+                    <input type="number" placeholder="Tasa de interés" id="Tasa102">
+                    <input type="button" value="¡Calcular!" onclick="calcularInteresOrdinario()" >
                     <div class="form-group">
                         <label for="">Resultado</label>
-                        <input type="number" class="form-control" readonly="" id="entero"
-                            placeholder="Resultado interés ordinario">
+                        
+                        <p id="resultado1"></p>
                     </div>
                 </fieldset>
             </div>
@@ -418,6 +416,7 @@
         <p>&copy; 2023 CodeBank. Todos los derechos reservados.</p>
     </footer>
     <script src="/interesimple.js"></script>
+    <script src="Funcionalidad/IS_OrdExcApr.js"></script>
 </body>
 
 </html>
