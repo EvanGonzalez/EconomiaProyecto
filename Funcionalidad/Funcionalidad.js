@@ -79,7 +79,7 @@ function imprimirCompuesto2() {
         p.innerHTML = S;
 }
 function imprimirCompuesto3() {
-    let capital = parseFloat(document.getElementById("Capital").value);
+    let capital = parseFloat(document.getElementById("Capital2").value);
     let monto = parseFloat(document.getElementById("Monto").value);
         let I = calcularInteresCompuesto(capital, monto);
         /* p = parrafo en el Front */
