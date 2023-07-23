@@ -3,6 +3,7 @@ input {
     height: 2em;
     border-color: gainsboro;
     border-radius: 30px;
+    text-align: center;
 }
 
 .consol {
@@ -12,7 +13,7 @@ input {
 
 .label {
     color: grey;
-    margin-right: 2em;
+    margin-right: 1em;
     width: 10em;
     height: 2em;
     text-align: end;
@@ -21,12 +22,35 @@ input {
 .collapse {
     margin: 1em;
     padding: 1em;
-    border: solid 1px #000;
+    border: solid 2px gray;
     border-radius: 30px;
 }
 
 .res {
+    width: 10em;
+    height: 2em;
+    border: solid 1px gainsboro;
     border-radius: 10px;
+}
+
+.rep {
+    display: flex;
+    align-items: center;
+}
+
+.code {
+    color:gray !important;
+    text-align: end !important;
+    width: 50%;
+    margin-right: 1em;
+}
+
+.conteres {
+    text-align: center;
+}
+
+h2 {
+    color: grey !important;
 }
 
 .btn2 {
@@ -38,4 +62,23 @@ input {
     border: solid 1px;
     border-radius: 10px;
     font-size: 16px;
+    
 }
+
+.respu {
+    margin: 15px;
+}
+
+p {
+    color: grey;
+}
+
+select {
+    width: 13em;
+    height: 3em;
+    margin: 1.5em;
+    border-radius: 10px;
+    color: grey;
+    font-size: 15px;
+}
+
