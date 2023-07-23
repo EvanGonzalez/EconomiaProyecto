@@ -20,7 +20,7 @@ function calcularMontoCompuesto2(C, I) {
 function calcularInteresCompuesto(S, C) {
     if (S <= 0 || C <= 0 || S <= C) {
         return "Error, los datos no pueden ser menores a 1"
-    } else if (S <= C) {
+    } else if (C <= S) {
         return "Error, el capital no puede ser mayor que el monto"
     }else {
       return S - C;  
