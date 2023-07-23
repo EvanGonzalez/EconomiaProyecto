@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="botones.css">
     <link rel="stylesheet" href="interesimple.css">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagenes/iconLogo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <title>Interés simple</title>
@@ -43,10 +43,10 @@
         <section class="holy-grail-content">
             <p>Opciones</p>
 
-            
+
             <!-- inicio de programacion interes simple -->
             <div class="container">
-                <button onclick="showInput('input1')" id="button1"  class="button">
+                <button onclick="showInput('input1')" id="button1" class="button">
                     <h4 class="responsive-text">Calcular capital</h4>
                 </button>
                 <button onclick="showInput('input2')" id="button2" class="button">
@@ -83,8 +83,8 @@
                     <h4 class="responsive-text">Calcular interés simple ordinario</h3>
                 </button>
             </div>
-            
-            
+
+
             <br />
             <br />
             <!-- calcular capital -->
@@ -99,12 +99,12 @@
                     C=&nbsp;&nbsp;
 
                     <!-- input para Monto -->
-                    <input type="number" id="montoC1" placeholder="Ingresa Monto">
+                    <input type="number" id="montoC1" class="imput" placeholder="Ingresa Monto">
 
                     &nbsp;&nbsp;-&nbsp;&nbsp;
 
                     <!-- input para Interés -->
-                    <input type="number" id="interesC1" placeholder="Ingresa Interés"> <br /><br>
+                    <input type="number" id="interesC1" class="imput" placeholder="Ingresa Interés"> <br /><br>
 
                     <!-- input tipo boton para calcular, llama a funcion calcular capital 1 -->
                     <input type="button" value="!Calcular!" class="boton5" onclick="calCapital1()"> <br><br>
@@ -156,14 +156,14 @@
                     <legend>Ingrese los datos requeridos - Monto con tiempo </legend><br>
                     <input type="number" id="capitalmis1" placeholder="Capital">
                     <input type="number" id="tiempomis1" placeholder="Tiempo">
-                    <input type="number" id="tinteresmis1" placeholder="Tasa de interés" 
-                        >
+                    <input type="number" id="tinteresmis1" placeholder="Tasa de interés" id="integerInput"
+                        onchange="convertToDecimal()">
                     <!-- Radio button para pedir el tipo de tiempo --> <br>
                     <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
                     <label for="anual">Años</label><br>
                     <input type="radio" id="meses" name="tipotiempo" value="Meses">
                     <label for="mensual">Meses</label><br>
-                    <input type="button" onclick="imprimirMs1()" value="¡Calcular!">
+                    <input type="button" onclick="" value="¡Calcular!">
                     <div class="form-group">
                         <label for="">Resultado</label>
                         <p id="resultMis1"></p>
@@ -186,16 +186,16 @@
                     C=&nbsp;&nbsp;
 
                     <!-- input para Interés (I) -->
-                    <input type="number" id="interesC2" placeholder="Ingresa Interés">
+                    <input type="number" id="interesC2" class="imput" placeholder="Ingresa Interés">
                     &nbsp;&nbsp;/&nbsp;&nbsp;
                     &nbsp;&nbsp;(&nbsp;&nbsp;
 
                     <!-- input para la tasa de interes (i) -->
-                    <input type="number" id="tasainteresC2" placeholder="Ingresa tasa de interés (%)">
+                    <input type="number" id="tasainteresC2" class="imput" placeholder="Ingresa tasa de interés (%)">
                     &nbsp;&nbsp;*&nbsp;&nbsp;
 
                     <!-- input paratiempo (t) -->
-                    <input type="number" id="tiempoC2" placeholder="Ingresa tiempo">
+                    <input type="number" id="tiempoC2" class="imput" placeholder="Ingresa tiempo">
                     &nbsp;&nbsp;)&nbsp;&nbsp;<br /><br>
 
                     <!-- Tipo de tiempo -->
@@ -203,11 +203,14 @@
                     <!-- Radio button para pedir el tipo de tiempo -->
                     <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
                     <label for="anual">Años</label><br>
+                    
                     <input type="radio" id="meses" name="tipotiempo" value="Meses">
-                    <label for="mensual">Meses</label><br>
+                    <label for="mensual" class="radioButtonGraph">Meses</label><br>
+                    
+
 
                     <!-- input tipo boton para calcular, llama a funcion calcular capital 2 -->
-                    <input type="button" value="!Calcular!" onclick="calCapital2()"> <br><br>
+                    <input type="button" class="boton5" value="!Calcular!" onclick="calCapital2()"> <br><br>
 
                     <div class="form-group">
                         <label for="">Resultado: </label>
@@ -222,18 +225,18 @@
             <div id="input6" style="display: none;">
                 <fieldset>
                     <legend>Ingrese los datos requeridos - Interés con tiempo</legend><br>
-                    <input type="number" id="capitalis2" placeholder="Capital">
-                    <input type="number" id="tiempois2" placeholder="Tiempo">
+                    <input type="number" id="capitalis2" class="imput" placeholder="Capital">
+                    <input type="number" id="tiempois2" class="imput" placeholder="Tiempo">
                     <!-- Radio button para pedir el tipo de tiempo -->
 
 
-                    <input type="number" id="tinteresis2" placeholder="Tasa de interés"
-                        >
+                    <input type="number" id="tinteresis2" placeholder="Tasa de interés" id="integerInput"
+                        onchange="convertToDecimal()">
                     <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
                     <label for="anual">Años</label><br>
                     <input type="radio" id="meses" name="tipotiempo" value="Meses">
                     <label for="mensual">Meses</label><br>
-                    <input type="button" onclick="imprimirIs2();" value="¡Calcular!">
+                    <input type="button" class="boton5" onclick="imprimirIs2();" value="¡Calcular!">
                     <div class="form-group">
                         <label for="">Resultado</label>
                         <p id="resultIis2"></p>
@@ -254,19 +257,19 @@
                     C=&nbsp;&nbsp;
 
                     <!-- input Monto (S) -->
-                    <input type="number" id="montoC3" placeholder="Ingresa Monto">
+                    <input type="number" id="montoC3" class="imput" placeholder="Ingresa Monto">
                     &nbsp;&nbsp;/ ( 1 + &nbsp;&nbsp;
 
                     <!-- input tasa de intéres (i) -->
-                    <input type="number" id="tasainteresC3" placeholder="Ingresa tasa de interés (%)">
+                    <input type="number" id="tasainteresC3" class="imput" placeholder="Ingresa tasa de interés (%)">
                     &nbsp;&nbsp;*&nbsp;&nbsp;
 
                     <!-- input tiempo (t) -->
-                    <input type="number" id="tiempoC3" placeholder="Ingresa tiempo">
+                    <input type="number" id="tiempoC3" class="imput" placeholder="Ingresa tiempo">
                     &nbsp;&nbsp;)&nbsp;&nbsp;<br /><br>
 
                     <!-- input de tipo boton para calcular, llama la funcion calCapital3 -->
-                    <input type="button" value="!Calcular!" onclick="calCapital3()"> <br><br>
+                    <input type="button" class="boton5" value="!Calcular!" onclick="calCapital3()"> <br><br>
 
                     <div class="form-group">
                         <label for="">Resultado: </label>
@@ -289,18 +292,19 @@
                     t =&nbsp;&nbsp;
 
                     <!-- input Interes (I) -->
-                    <input type="number" id="interesT" placeholder="Ingresa Interés">
+                    <input type="number" id="interesT" class="imput" placeholder="Ingresa Interés">
                     &nbsp;&nbsp;/&nbsp;&nbsp;
 
                     <!-- input Capital (C) -->
-                    <input type="number" id="capitalT" placeholder="Ingresa Capital">
+                    <input type="number" id="capitalT" class="imput" placeholder="Ingresa Capital">
                     &nbsp;&nbsp;*&nbsp;&nbsp;
 
                     <!-- input tasa de interés (i) -->
-                    <input type="number" id="tasainteresT" placeholder="Ingresa tasa de interés (%)"><br /><br>
+                    <input type="number" id="tasainteresT" class="imput"
+                        placeholder="Ingresa tasa de interés (%)"><br /><br>
 
                     <!-- input de tipo boton para calcular, llama a la funcion cal Tiempo -->
-                    <input type="button" value="!Calcular!" onclick="calTiempo()"> <br><br>
+                    <input type="button" class="boton5" value="!Calcular!" onclick="calTiempo()"> <br><br>
 
                     <div class="form-group">
                         <label for="">Resultado: </label>
@@ -317,15 +321,15 @@
                     <legend>Ingrese los datos requeridos - Tiempo Exacto</legend><br>
                     <label class="-field-date">
                         <span>Fecha inicial</span>
-                        <input type="date" placeholder="Fecha inicial" id="Fechainicial">
+                        <input type="date" placeholder="Fecha inicial" class="imput" id="Fechainicial">
                     </label>
 
                     <label for="Fecha Inicial"></label>
                     <label class="-field-date">
                         <span>Fecha final</span>
-                        <input type="date" placeholder="Fecha final" id="FechaFinal">
+                        <input type="date" placeholder="Fecha final" class="imput" id="FechaFinal">
                     </label>
-                    <input type="button" value="¡Calcular!" onclick="tiempoExacto()">
+                    <input type="button" class="boton5" value="¡Calcular!" onclick="tiempoExacto()">
                     <div class="form-group">
                         <label for="">Resultado</label>
                         <p id="resultado5"></p>
@@ -341,15 +345,15 @@
                     <legend>Ingrese los datos requeridos - Tiempo Aproximado</legend><br>
                     <label class="-field-date">
                         <span>Fecha inicial</span>
-                        <input type="date" placeholder="Fecha inicial" id="Fechainicial2">
+                        <input type="date" placeholder="Fecha inicial" class="imput" id="Fechainicial2">
                     </label>
 
                     <label for="Fecha Inicial"></label>
                     <label class="-field-date">
                         <span>Fecha final</span>
-                        <input type="date" placeholder="Fecha final" id="FechaFinal2">
+                        <input type="date" placeholder="Fecha final" class="imput" id="FechaFinal2">
                     </label>
-                    <input type="button" value="¡Calcular!" onclick="tiempoAproximado()">
+                    <input type="button" class="boton5" value="¡Calcular!" onclick="tiempoAproximado()">
                     <div class="form-group">
                         <label for="">Resultado</label>
                         <p id="resultado77"></p>
@@ -364,10 +368,10 @@
             <div id="input11" style="display: none;">
                 <fieldset>
                     <legend>Ingrese los datos requeridos - Interés simple exacto </legend><br>
-                    <input type="number" placeholder="Tiempo" id="Tiempo101">
-                    <input type="number" placeholder="Capital" id="Capital101">
-                    <input type="number" placeholder="Tasa de interés" id="Tasa101">
-                    <input type="button" value="¡Calcular!" onclick="calcularInteresExacto()">
+                    <input type="number" placeholder="Tiempo" class="imput" id="Tiempo101">
+                    <input type="number" placeholder="Capital" class="imput" id="Capital101">
+                    <input type="number" placeholder="Tasa de interés" class="imput" id="Tasa101">
+                    <input type="button" class="boton5" value="¡Calcular!" onclick="calcularInteresExacto()">
                     <div class="form-group">
                         <label for="">Resultado</label>
 
@@ -382,10 +386,10 @@
             <div id="input12" style="display: none;">
                 <fieldset>
                     <legend>Ingrese los datos requeridos - Interés simple ordinario </legend><br>
-                    <input type="number" placeholder="Tiempo" id="Tiempo102">
-                    <input type="number" placeholder="Capital" id="Capital102">
-                    <input type="number" placeholder="Tasa de interés" id="Tasa102">
-                    <input type="button" value="¡Calcular!" onclick="calcularInteresOrdinario()">
+                    <input type="number" placeholder="Tiempo" class="imput" id="Tiempo102">
+                    <input type="number" placeholder="Capital" class="imput" id="Capital102">
+                    <input type="number" placeholder="Tasa de interés" class="imput" id="Tasa102">
+                    <input type="button" class="boton5" value="¡Calcular!" onclick="calcularInteresOrdinario()">
                     <div class="form-group">
                         <label for="">Resultado</label>
 
