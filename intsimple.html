@@ -124,8 +124,8 @@
             <div id="input2" style="display: none;">
                 <fieldset>
                     <legend>Ingrese los datos requeridos - Interés </legend><br>
-                    <input type="number" id="montois1" placeholder="Monto" class="imput">
-                    <input type="number" class="imput" id="capitalis1" placeholder="Capital">
+                    <input type="number" id="montois1" placeholder="Monto" class="input">
+                    <input type="number" class="input" id="capitalis1" placeholder="Capital">
                     <input type="button" class="boton5" onclick="imprimirIs1();" value="!Calcular!">
                     <div class="form-group">
                         <label for="">Resultado</label>
@@ -139,13 +139,12 @@
             <div id="input3" style="display: none;">
                 <fieldset>
                     <legend>Ingrese los datos requeridos - Monto </legend><br>
-                    <input type="number" class="imput" id="capitalmis2" placeholder="Capital">
-                    <input type="number" class="imput" id="interesmis2" placeholder="interes">
-                    <input type="button" class="boton5" value="¡Calcular!">
+                    <input type="number" id="capitalmis2" placeholder="Capital">
+                    <input type="number" id="interesmis2" placeholder="interes">
+                    <input type="button" onclick="imprimirMs2()" value="¡Calcular!">
                     <div class="form-group">
                         <label for="">Resultado</label>
-                        <input type="number" class="form-control" readonly="" id="resultMis2"
-                            placeholder="Resultado monto">
+                        <p id="resultMis2"></p>
                     </div>
                 </fieldset>
             </div>
@@ -155,16 +154,16 @@
             <div id="input4" style="display: none;">
                 <fieldset>
                     <legend>Ingrese los datos requeridos - Monto con tiempo </legend><br>
-                    <input type="number" class="imput" id="capitalmis1" placeholder="Capital">
-                    <input type="number" class="imput" id="tiempomis1" placeholder="Tiempo">
-                    <input type="number" class="imput" id="tinteresmis1" placeholder="Tasa de interés" id="integerInput"
-                        onchange="convertToDecimal()">
+                    <input type="number" id="capitalmis1" placeholder="Capital">
+                    <input type="number" id="tiempomis1" placeholder="Tiempo">
+                    <input type="number" id="tinteresmis1" placeholder="Tasa de interés" 
+                        >
                     <!-- Radio button para pedir el tipo de tiempo --> <br>
                     <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
                     <label for="anual">Años</label><br>
                     <input type="radio" id="meses" name="tipotiempo" value="Meses">
                     <label for="mensual">Meses</label><br>
-                    <input type="button" class="boton5" onclick="" value="¡Calcular!">
+                    <input type="button" onclick="imprimirMs1()" value="¡Calcular!">
                     <div class="form-group">
                         <label for="">Resultado</label>
                         <p id="resultMis1"></p>
@@ -226,14 +225,13 @@
             <div id="input6" style="display: none;">
                 <fieldset>
                     <legend>Ingrese los datos requeridos - Interés con tiempo</legend><br>
-                    <input type="number" id="capitalis2" class="imput" placeholder="Capital">
-                    <input type="number" id="tiempois2" class="imput" placeholder="Tiempo">
+                    <input type="number" id="capitalis2" class="input" placeholder="Capital">
+                    <input type="number" id="tiempois2" class="input" placeholder="Tiempo">
                     <!-- Radio button para pedir el tipo de tiempo -->
 
 
-                    <input type="number" id="tinteresis2" class="imput" placeholder="Tasa de interés" id="integerInput"
-                        onchange="convertToDecimal()">
-                    <br>
+                    <input type="number" id="tinteresis2" placeholder="Tasa de interés" 
+                        >
                     <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
                     <label for="anual">Años</label><br>
                     <input type="radio" id="meses" name="tipotiempo" value="Meses">
