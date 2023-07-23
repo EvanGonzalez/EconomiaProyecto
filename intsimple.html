@@ -41,7 +41,7 @@
 
 
         <section class="holy-grail-content">
-            <p>Opciones</p>
+            <p>Escoja la opcion que desee calcular</p>
 
 
             <!-- inicio de programacion interes simple -->
@@ -156,14 +156,14 @@
                     <legend>Ingrese los datos requeridos - Monto con tiempo </legend><br>
                     <input type="number" id="capitalmis1" placeholder="Capital">
                     <input type="number" id="tiempomis1" placeholder="Tiempo">
-                    <input type="number" id="tinteresmis1" placeholder="Tasa de interés" id="integerInput"
-                        onchange="convertToDecimal()">
+                    <input type="number" id="tinteresmis1" placeholder="Tasa de interés" 
+                        >
                     <!-- Radio button para pedir el tipo de tiempo --> <br>
                     <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
                     <label for="anual">Años</label><br>
                     <input type="radio" id="meses" name="tipotiempo" value="Meses">
                     <label for="mensual">Meses</label><br>
-                    <input type="button" onclick="" value="¡Calcular!">
+                    <input type="button" onclick="imprimirMs1()" value="¡Calcular!">
                     <div class="form-group">
                         <label for="">Resultado</label>
                         <p id="resultMis1"></p>
@@ -225,13 +225,13 @@
             <div id="input6" style="display: none;">
                 <fieldset>
                     <legend>Ingrese los datos requeridos - Interés con tiempo</legend><br>
-                    <input type="number" id="capitalis2" class="imput" placeholder="Capital">
-                    <input type="number" id="tiempois2" class="imput" placeholder="Tiempo">
+                    <input type="number" id="capitalis2" class="input" placeholder="Capital">
+                    <input type="number" id="tiempois2" class="input" placeholder="Tiempo">
                     <!-- Radio button para pedir el tipo de tiempo -->
 
 
-                    <input type="number" id="tinteresis2" placeholder="Tasa de interés" id="integerInput"
-                        onchange="convertToDecimal()">
+                    <input type="number" id="tinteresis2" placeholder="Tasa de interés" 
+                        >
                     <input type="radio" id="anos" name="tipotiempo" value="Anos" checked>
                     <label for="anual">Años</label><br>
                     <input type="radio" id="meses" name="tipotiempo" value="Meses">
