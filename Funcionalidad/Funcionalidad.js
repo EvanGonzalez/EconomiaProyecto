@@ -83,7 +83,7 @@ function imprimirCompuesto2() {
 function imprimirCompuesto3() {
     let capital = parseFloat(document.getElementById("Capital2").value);
     let monto = parseFloat(document.getElementById("Monto").value);
-        let I = calcularInteresCompuesto(capital, monto);
+        let I = calcularInteresCompuesto(monto, capital);
         /* p = parrafo en el Front */
         let p = document.getElementById("respuesta3");
         /* Se imprime el valor de A en el párrafo del front-end */
