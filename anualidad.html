@@ -54,7 +54,7 @@
                 <fieldset>
                     <legend></legend><br>
                         <!-- Texto de formula -->
-                        <label for="monto">Fórmula: A = R [1 - (1+i)^(-n)/i]</label><br/><br>
+                        <label for="monto">Fórmula: A = R [(1 - (1+i)^(-n))/i]</label><br/><br>
                             <label for="periodo" style="font-family: 'Times New Roman'; font-size: 20px;">Convertible:</label>
                             <select name="" id="periodo">
                                 <option value="0">Seleccione un periodo...</option>
@@ -69,7 +69,7 @@
                             <!-- input para Monto -->
                             <input type="number" id="montoC1" placeholder="Ingresa Capital">
                             
-                            &nbsp;[1&nbsp;- (1+&nbsp;
+                            &nbsp;[(1&nbsp;- (1+&nbsp;
 
                             <!-- input para Interés -->
                             <input type="number" id="interesC1" placeholder="Ingresa tasa de interés">
@@ -78,7 +78,7 @@
 
                             <input type="number" id="tiempo" placeholder="Ingresa tiempo">
 
-                            &nbsp;) / i ]&nbsp; </br></br>
+                            &nbsp;)) / i ]&nbsp; </br></br>
 
                             <!-- input tipo boton para calcular, llama a funcion calcular capital 1 -->
                             <input type="button" id="btnCalcular" value="¡Calcular!" onclick="imprimirA()"> <br><br>
@@ -94,7 +94,7 @@
                 <fieldset>
                     <legend></legend><br>
                         <!-- Texto de formula -->
-                        <label for="monto">Fórmula: A = R [1 - (1+i)^(-n)/i]</label><br/><br>
+                        <label for="monto">Fórmula: S = R [((1+i)^(n)-1)/i]</label><br/><br>
                             <label for="periodo2" style="font-family: 'Times New Roman'; font-size: 20px;">Convertible:</label>
                             <select name="" id="periodo2">
                                 <option value="0">Seleccione un periodo...</option>
@@ -104,21 +104,21 @@
                                 <option value="4">Mensual</option>
                             </select>
                             <br><br>
-                            
+                            S=&nbsp;&nbsp;
                         
                             <!-- input para Monto -->
                             <input type="number" id="montoC2" placeholder="Ingresa Capital">
                             
-                           
+                            &nbsp;[((1&nbsp;+&nbsp;
 
                             <!-- input para Interés -->
                             <input type="number" id="interesC2" placeholder="Ingresa tasa de interés">
 
-                           
+                            &nbsp;) ^ (&nbsp;&nbsp;
 
                             <input type="number" id="tiempo2" placeholder="Ingresa tiempo">
 
-                            
+                            &nbsp;) -1 ) / i ]&nbsp; </br></br>
 
                             <!-- input tipo boton para calcular, llama a funcion calcular capital 1 -->
                             <input type="button" id="btnCalcular2" value="¡Calcular!" onclick="imprimirS()"> <br><br>
@@ -130,14 +130,6 @@
                         </div>
                     </fieldset>
         </section>
-
-        <div class="holy-grail-sidebar-1 hg-sidebar" >
-           
-        </div>
-
-        <div class="holy-grail-sidebar-2 hg-sidebar">
-            
-        </div>
     </div>
 
     <footer>
