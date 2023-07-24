@@ -57,6 +57,7 @@ function tiempoAproximado() {
     let mi=parseInt(fechaInicioObj.substring(5,7));
     let mf=parseInt(fechaFinObj.substring(5,7));
     let t;
+    let dias=df-di;
     if(dias<0){
          t=(Math.abs((df-di))-(Math.abs((mf-mi))*30));
     }else{
