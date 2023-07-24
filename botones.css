@@ -34,3 +34,38 @@
   box-shadow: 0 5px #c0c0c5;
   transform: translateY(4px);
 }
+
+/*Css para botones de anualidad*/
+#btnCalcular {
+  border-color: transparent;
+  background-color: #C5DFF8;
+  font-size:20px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  width:115px;
+  height:40px;
+}
+
+#btnCalcular:hover {
+  background-color: #d1e6f9;
+  color: #000000;
+  font-weight:bold;
+  border-color: rgb(0, 213, 255);
+}
+
+#btnCalcular2 {
+  border-color: transparent;
+  background-color: #C5DFF8;
+  font-size:20px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  width:115px;
+  height:40px;
+}
+
+#btnCalcular2:hover {
+  background-color: #d1e6f9;
+  color: #000000;
+  font-weight:bold;
+  border-color: rgb(0, 213, 255);
+}
