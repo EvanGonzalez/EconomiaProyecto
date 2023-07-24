@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="icompuesto.css">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagenes/iconLogo.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -32,10 +32,10 @@
                         <input type="radio" name="slider" id="close-btn">
                         <ul class="nav-links">
                             <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-                            <li><a href="/index.html">Inicio</a></li>
-                            <li><a href="/intsimple.html">Interés simple</a></li>
-                            <li><a href="/intcompuesto.html">Interés compuesto</a></li>
-                            <li><a href="/anualidad.html">Anualidades Ordinarias</a></li>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="intsimple.html">Interés simple</a></li>
+                            <li><a href="intcompuesto.html">Interés compuesto</a></li>
+                            <li><a href="anualidad.html">Anualidades Ordinarias</a></li>
                         </ul>
                         <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
                     </div>
@@ -64,14 +64,13 @@
                         <div class="card card-body">
                             <div class="row">
                                 <h2>Calcular Monto Compuesto</h2>
-                                    <br>
                                 <select name="" id="periodo">
-                                <option value="0">Seleccione un periodo...</option>
-                                <option value="1">Anual</option>
-                                <option value="2">Semestral</option>
-                                <option value="3">Trimestral</option>
-                                <option value="4">Mensual</option>
-                                    </select>
+                                    <option value="0">Seleccione un periodo</option>
+                                    <option value="1">Anual</option>
+                                    <option value="2">Semestral</option>
+                                    <option value="3">Trimestral</option>
+                                    <option value="4">Mensual</option>
+                                </select>
                                 <div class="col-md-8">
                                     <div class="consol">
                                         <label for="Capital" class="label">Capital:</label>
@@ -94,11 +93,12 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                        
                         <div class="colaider">
-                            <button class="btn2" onClick="imprimirCompuesto1()">Calcular</button>
+                            <button class="btn2 respu" onClick="imprimirCompuesto1()">Calcular</button>
                         </div>
-                        <div class="colaider">
+                        <div class="colaider rep">
+                            <label for="" class="code">Repsuesta: </label>
                             <p class="res" id="respuesta"></p>  
                         </div>
                         
@@ -106,8 +106,7 @@
                     <div class="collapse" id="montoCompuesto2">
                         <div class="card card-body">
                             <div class="row">
-                            <h2>Calculo de Monto Compuesto 2</h2>
-    
+                            <h2 class="h2">Calculo de Monto Compuesto 2</h2>
                                 <div class="col-md-8">
                                     <div class="consol">
                                         <label for="Capital1" class="label">Capital</label>
@@ -124,11 +123,12 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
+                        
                         <div class="colaider">
-                            <button class="btn2" onClick="imprimirCompuesto2()">Calcular</button>
+                            <button class="btn2 respu" onClick="imprimirCompuesto2()">Calcular</button>
                         </div>
-                        <div class="colaider">
+                        <div class="colaider rep">
+                            <label for="" class="code">Repsuesta: </label>
                             <p class="res" id="respuesta2"></p>  
                         </div>
                         
@@ -149,9 +149,10 @@
                                 </div>
                             </div>
                         <div class="colaider">
-                            <button class="btn2" onClick="imprimirCompuesto3()">Calcular</button>
+                            <button class="btn2 respu" onClick="imprimirCompuesto3()">Calcular</button>
                         </div>
-                        <div class="colaider">
+                        <div class="colaider rep">
+                            <label for="" class="code">Repsuesta: </label>
                             <p class="res" id="respuesta3"></p>  
                         </div>
                         </div>
@@ -160,7 +161,7 @@
                         <div class="card card-body">
                             <h2>Calcular Capital Compuesto</h2>
                                 <select name="" id="periodo1">
-                                <option value="0">Seleccione un periodo...</option>
+                                <option value="0">Seleccione un periodo</option>
                                 <option value="1">Anual</option>
                                 <option value="2">Semestral</option>
                                 <option value="3">Trimestral</option>
@@ -185,9 +186,10 @@
                                 </div>
                             </div>
                              <div class="colaider">
-                            <button class="btn2" onClick="imprimirCompuesto4()">Calcular</button>
+                            <button class="btn2 respu" onClick="imprimirCompuesto4()">Calcular</button>
                         </div>
-                        <div class="colaider">
+                        <div class="colaider rep">
+                            <label for="" class="code">Repsuesta: </label>
                             <p class="res" id="respuesta4"></p>  
                         </div>
                         </div>
