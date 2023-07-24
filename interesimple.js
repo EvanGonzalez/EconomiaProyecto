@@ -17,6 +17,7 @@ function disableOtherButtons(selectedInputId, buttons) {
       var button = buttons[i];
       if (button.id !== "button" + selectedInputId.slice(5)) {
         button.disabled = true;
+        button.classList.add('inactive'); // Agrega la clase 'inactive' para cambiar el color
       }
     }
   }
@@ -24,8 +25,35 @@ function disableOtherButtons(selectedInputId, buttons) {
   function enableAllButtons(buttons) {
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = false;
+      buttons[i].classList.remove('inactive'); // Quita la clase 'inactive' para restaurar el color original
     }
   }
+
+//   limpiar inputs 
+function limpiarInputs() {
+    // Limpiar los campos de entrada
+    var inputs = document.querySelectorAll('input.imput');
+    inputs.forEach(input => {
+        input.value = '';
+    });
+
+    // Limpiar el resultado mostrado
+    var resultado = document.getElementById('resultcalCapital1');
+    var resultado = document.getElementById('resultIis1');
+    var resultado = document.getElementById('resultMis2');
+    var resultado = document.getElementById('anos');
+    var resultado = document.getElementById('meses');
+    var resultado = document.getElementById('resultMis1');
+    var resultado = document.getElementById('resultcalCapital2');
+    var resultado = document.getElementById('resultIis2');
+    var resultado = document.getElementById('resultcalTiempo');
+    var resultado = document.getElementById('resultado5');
+    var resultado = document.getElementById('resultado');
+    var resultado = document.getElementById('resultado1');
+    resultado.textContent = '';
+}
+
+// fin de limpiar inputs
 
 
 

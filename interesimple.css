@@ -50,6 +50,35 @@
   text-shadow: 1px 1px 6px #fff;
 }
 
+
+/* boton de limpiar */
+
+.boton6 {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: #ac314a;
+  border-radius: 12px;
+  position: relative;
+  border: 2px solid #ac314a;
+  outline: 1px solid;
+  outline-color: rgba(18, 20, 20, 0.4);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+}
+.boton6:hover {
+  box-shadow: inset 0 0 20px rgba(52, 57, 58, 0.5),
+    0 0 20px rgba(37, 48, 52, 0.4);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
+}
+
+/* fin de boton limpiar */
+
+
+
 /* estilo de boton 2 */
 .button {
   color: #fff !important;
@@ -125,3 +154,6 @@
 
   /* boton de opciones */
 
+  .inactive {
+    background-color: lightgray; /* Cambia el color de los botones inactivos */
+}
